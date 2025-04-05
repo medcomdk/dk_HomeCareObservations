@@ -28,8 +28,6 @@ dependencies:
   medcom.fhir.dk.terminology: 1.8.0
   medcom.fhir.dk.core: 2.4.0
   medcom.fhir.dk.messaging: 2.2.1
-  medcom.fhir.dk.messagedefinitions: current
-  
 
 
   
