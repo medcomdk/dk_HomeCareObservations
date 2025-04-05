@@ -1,5 +1,8 @@
-The following updates have been performed on this IG to handle errors in the QA-report and ensure correct guidance. 
-* Updated examples with correct references to included instances and terminology
-* Updated use of terminology for the MedComHomeCareObservation profile
-* Updated id of profiles 
-* Added required references to MedComHomeCareObservationMessageDefinition profile in the MedComHomeObservationMessageHeader.definition element. 
+* This Implementation Guide contains profiles developed to be part of a production trial of the communication between the general practitioner and municipal acute care team.
+
+* This Implementation Guide contains profille: 
+    * MedCom HomeCareMessage
+    * MedCom HomeCareMessageHeader
+    * MedCom HomeCareDiagnosticReport
+    * MedCom HomeCareObservation
+    
