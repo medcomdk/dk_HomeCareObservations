@@ -18,7 +18,7 @@ releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | rel
 jurisdiction: urn:iso:std:iso:3166#DK "Denmark"
 publisher:
   name: MedCom
-  url: http://www.medcodm.dk
+  url: http://www.medcom.dk
   # email: test@example.org
 
 dependencies:
