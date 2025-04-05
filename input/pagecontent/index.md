@@ -16,7 +16,7 @@ The MedCom HomeCareObservation supports following content in relation to healthc
 [More information about the clinical guidelines for applications can be found here.](https://medcomdk.github.io/dk_HomeCareObservations/#11-clinical-guidelines-and-documentation) 
 
 ## MedCom HomeCareObservation
-The structure of a MedCom HomeCareObservation is despicted on the following diagram:
+The structure of a MedComHomeCareObservation is despicted on the following diagram:
 <figure>
 <img alt="Shows the structure of a HomeCareObservationMessage. The HomeCareObservationMessage includes a MedComHomeCareObservationsMessageHeader and a MedComMessagingProvenance. MedComHomeCareObservationsMessageHeader references a sender and receiver organization, the MedComCoreOrganization and a focus which is a reference to a HomeCare Report. Form the HomeCareRepport is a MedComCorePatient and HomeCareObservation and a MedComObservationProducerOrganization. " src="./HomeCareObservation/HomeCareObservationMessage.svg" style="float:none; display:block; margin-left:auto; margin-right:auto;" id="Fig1"/>
 <figcaption text-align="center"><b>Figure 1: Overview of the references between profiles in a MedCom HomeCareObservation. </b></figcaption>
@@ -30,7 +30,7 @@ MedCom HomeCareObservation follows the general MedCom FHIR messaging model, exce
 ### MedComHomeCareObservationMessage
 The MedComHomeCareObservationMessage profile is used to bundle all observations and relevant information together. All referenced resources in the HomeCareObservationMessage shall be contained in the entry list in MedComHomeCareObservationMessage. 
 
-The [MedComHomeCareObservationMessage](http://medcomfhir.dk/ig/homecareobservation/StructureDefinition-medcom-homecare-message.html) is a constraint of the [MedComMessagingMessage](https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-message.html) further to use the [MedComHomeCareObservationsMessageHeader](http://medcomfhir.dk/ig/homecareobservation/StructureDefinition-medcom-homecareobservation-MessageHeader.html) and to require exactly one [MedComCorePatient](https://medcomfhir.dk/ig/core/StructureDefinition-medcom-core-patient.html).
+The [MedComHomeCareObservationMessage](http://medcomfhir.dk/ig/homecareobservation/StructureDefinition-medcom-homecareobservation-message.html) is a constraint of the [MedComMessagingMessage](https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-message.html) further to use the [MedComHomeCareObservationsMessageHeader](http://medcomfhir.dk/ig/homecareobservation/StructureDefinition-medcom-homecareobservation-messageheader.html) and to require exactly one [MedComCorePatient](https://medcomfhir.dk/ig/core/StructureDefinition-medcom-core-patient.html).
 Furthermore, it contains rules that constrains the ValueSet of activities in the <a href="https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-provenance.html">MedComMessagingProvenance</a> profile to only contain activities from the [MedComHomeCareObservationMessageAcitivityCodes](http://medcomfhir.dk/ig/terminology/ValueSet-medcom-HomeCareObservation-messagingActivities.html) ValueSet, which contains activities such as new-message, forward-message, and other activities triggering the message.
 
 
@@ -38,12 +38,11 @@ Furthermore, it contains rules that constrains the ValueSet of activities in the
 The [MedComHomeCareObservationsMessageHeader](http://medcomfhir.dk/ig/homecareobservation/StructureDefinition-medcom-homecareobservation-MessageHeader.html) constrains the [MedComMessagingMessageHeader](https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-messageHeader.html) further to specify the fixed coding for this message and constrains the use of carbon-copy destination. 
 
 ### MedComHomeCareDiagnosticReport
-The [MedComHomeCareDiagnosticReport](http://medcomfhir.dk/ig/homecareobservation/StructureDefinition-MedComHomeCareDiagnosticReport.html) profile contains the main content of the HomeCareObservation message. It is inherited from the profile [MedComCoreDiagnosticReport](http://medcomfhir.dk/ig/homecareobservation/StructureDefinition-medcom-core-diagnosticreport.html). The MedComHomeCareDiagnosticReport shall include observation results performed and produced by the municipalties acute care team. Futher shall the MedComHomeCareDiagnostiscRepport include an information about the status of the observation results.  
-The profile also includes information about the performer, i.e the preson who performed and produced observations results. The perfomer informations consist of a signature that requires the name, title and relevant telephone number.Further, this profile also contains the clinical observations (nursing assessments) regarding the citizens overall results and health status.
+The [MedComHomeCareDiagnosticReport](http://medcomfhir.dk/ig/homecareobservation/StructureDefinition-medcom-homecare-diagnosticreport.html) profile contains the main content of the HomeCareObservation message. It is inherited from the profile [MedComCoreDiagnosticReport](http://medcomfhir.dk/ig/homecareobservation/StructureDefinition-medcom-core-diagnosticreport.html). The MedComHomeCareDiagnosticReport shall include observation results performed and produced by the municipalties acute care team. Futher shall the MedComHomeCareDiagnostiscRepport include an information about the status of the observation results.  
+The profile also includes information about the performer, i.e the person who performed and produced observations results. The perfomer informations consist of a signature that requires the name, title and relevant telephone number.Further, this profile also contains the clinical observations (nursing assessments) regarding the citizens overall results and health status.
 [Click here for read more information about the clinical observations.](http://medcomfhir.dk/ig/homecareobservation/StructureDefinition-medcom-homecare-diagnosticreport.html)
 
 This profile also allows to send relevant attachments from the acute home care visit.  Attachment that are allowed to sendt with the HomeCareDiagnosticReport are: pdf, jpeg, png, tiff or gif.
-
 
 ### MedComHomeCareObservation
 The [MedComHomeCareObservation](http://medcomfhir.dk/ig/homecareobservation/StructureDefinition-medcom-homeCare-observation.html) profile inherits from the MedComCoreObservation profile. This profile includes infromation about what observation was performed, what date & time, by whom, and what result was obtained.
@@ -67,12 +66,12 @@ The [MedComMessagingProvenance](http://medcomfhir.dk/ig/messaging/StructureDefin
 The [MedComMessagingOrganization ](http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-organization.html) profile is used in the MedComHomeCareObservationMessageHeader profile to describe the sender organization of the HomeCareDiagnosticReport. The sender organization can be the municipality to which the acute ceare team belongs. 
 
 ### MedComRequesterOrganization 
-The [MedComRequesterOrganization]( http://medcomfhir.dk/ig/homecareobservation/StructureDefinition-medcom-requesterorganization.html) represents the receiver of the HomeCareObservation message. The receiver information consist of the initials of the general practitioner that requisitioned acute homecare visit and observation, if known, and identifiers such as SOR-, EAN and Ydernummer-identifier to represent the general practitioner.
+The [MedComRequesterOrganization]( http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-requesterorganization.html) represents the receiver of the HomeCareObservation message. The receiver information consist of the initials of the general practitioner that requisitioned acute homecare visit and observation, if known, and identifiers such as SOR-, EAN and Ydernummer-identifier to represent the general practitioner.
 If the initials of the general practitioner are unknown, then the code "unknown" form the [data-absent-reason ValueSet](http://hl7.org/fhir/R4/valueset-data-absent-reason.html) shall be sent.  In MedComRequesterOrganization the contact.name.given shall be used to express the initials of the general practitioner. The standard follows HL7 rulse to expres initals. [Click here to read the rules](http://hl7.org/fhir/R4/datatypes.html#HumanName)
 
 
 ### MedComProducerOrganization
-The [MedComProducerOrganization](http://medcomfhir.dk/ig/homecareobservation/StructureDefinition-medcom-producer-organization.html) profile is used in a HomeCareObservation message to represent the organization that is responsible for performing and analysing, thereby producing, the observation results e.g. acute careteam. The MedComProducerOrganization shall be identified using municipality SOR-ID, and a producer-ID.  The producer-ID consists of a <a href= "http://medcomfhir.dk/ig/terminology/CodeSystem-MedComProducentID.html">three letter code, which is displayed on the terminology IG</a>. In a receiver system, the interpretation of the two codes will together state that an acute care team from e.g. Aarhus municipality is the producer of the results.
+The [MedComProducerOrganization](https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-producer-organization.html) profile is used in a HomeCareObservation message to represent the organization that is responsible for performing and analysing, thereby producing, the observation results e.g. acute careteam. The MedComProducerOrganization shall be identified using municipality SOR-ID, and a producer-ID.  The producer-ID consists of a <a href= "http://medcomfhir.dk/ig/terminology/CodeSystem-MedComProducentID.html">three letter code, which is displayed on the terminology IG</a>. In a receiver system, the interpretation of the two codes will together state that an acute care team from e.g. Aarhus municipality is the producer of the results.
 
 ### MedComCoreMedia
 The [MedComCoreMedia](http://medcomfhir.dk/ig/homecareobservation/StructureDefinition-medcom-media.html) profile is used in HomeCareObservation message to represents the relevant attachements added to the HomeCareDagnosticReport. MedComCoreMedia is referred from HomCareDiagnosticReport.media.link. 
@@ -152,10 +151,10 @@ On [MedCom Terminology IG](http://medcomfhir.dk/ig/terminology/) all referenced 
 This IG has a dependency to the [MedCom Core IG](http://medcomfhir.dk/ig/core/), [MedCom Messaging IG](http://medcomfhir.dk/ig/messaging/), [MedCom Terminology IG](http://medcomfhir.dk/ig/terminology/) and [DK-core v. 2.0.0](https://hl7.dk/fhir/core/), where the latter is defined by [HL7 Denmark](https://hl7.dk/). These dependencies are currently reflected in MedComHomeCareMessage, and MedComHomeMessageHeader which both inherits from profiles defined MedComMessaging IG. Further, it is reflected in references to MedComCorePatient, MedComCoreEncounter, MedComCoreOrganization and MedComMessagingOrganization.
 
 ## Download 
-Content in this IG can be downloaded in npm format under [Download](https://medcomfhir.dk/ig/MedComHomeCareObservations/downloads.html). This can be used to validate locale FHIR profiles against.
+Content in this IG can be downloaded in npm format under [Download](https://medcomfhir.dk/ig/homecareobservation/downloads.html). This can be used to validate locale FHIR profiles against.
 
 ## Documentation
-On the [introduction page for HomeCareObservations](https://medcomdk.github.io/dk-medcom-homecareobservations/) the following documentation can be found: 
+On the [introduction page for HomeCareObservations](https://medcomdk.github.io/dk_HomeCareObservations/) the following documentation can be found: 
 * Clinical guidelines
 * Use cases 
 

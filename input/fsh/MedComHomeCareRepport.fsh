@@ -1,7 +1,7 @@
-Profile: MedComHomeCareDiagnosticReport
+Profile: MedComHomeCareObservationDiagnosticReport
 Parent: MedComCoreDiagnosticReport
-Id: medcom-homecare-diagnosticreport
-Title: "MedComHomeCareDiagnosticReport"
+Id: medcom-homecareobservation-diagnosticreport
+Title: "MedComHomeCareObservationDiagnosticReport"
 Description: "This resource is intenden to be used in relation with a HomeCareObservation message"
 * conclusion ^short = "A comment relevant for all observations in the report and necessary to interpret and understand the results (Danish:Klinisk kommentar)."
 * result only Reference(MedComHomeCareObservation)
@@ -13,7 +13,7 @@ Description: "This resource is intenden to be used in relation with a HomeCareOb
 * performer ^slicing.discriminator.path = "resolve()"
 * performer ^slicing.rules = #closed
 * performer ^slicing.ordered = false
-* performer ^slicing.description = " Slice of observation codes"
+* performer ^slicing.description = "Slice of observation codes"
 * performer contains 
     ProducerOrganization 1..1 and
     PractitionerRole 1..1
@@ -47,7 +47,7 @@ Expression: "reference.resolve().practitioner.resolve().telecom.where(system = '
 
 
 Instance: 870333ac-3134-4ae6-8257-86e0b0537c5f
-InstanceOf: MedComHomeCareDiagnosticReport
+InstanceOf: MedComHomeCareObservationDiagnosticReport
 Usage: #example
 Title: "HomeCareDiagnosticReport: spot test and EKG"
 Description: "Spot test and EKG performed by the acute care team on a subject."
@@ -73,25 +73,25 @@ Description: "Spot test and EKG performed by the acute care team on a subject."
 
 
 Instance: 6d08f000-33cc-41f3-a7c2-c086d53d31a7
-InstanceOf: MedComHomeCareDiagnosticReport
+InstanceOf: MedComHomeCareObservationDiagnosticReport
 Usage: #example
 Title: "HomeCareDiagnosticReport: Urine dipsticks tests and refused consent"
 Description: "Urine dipstick tests performed by the acute care team on a subject, that has refused consent."
 * status = $StatusCodeDiagnosticReport#final
 * issued = 2023-09-12T12:24:08+02:00
 * code.coding = $DiagnosticReportCodeSystem#HomeCareReport
-* subject = Reference(99f5578f-c9d3-4d8c-aa3e-21690e03e27c)
+* subject = Reference(733cef33-3626-422b-955d-d506aaa65fe1)
 * performer[ProducerOrganization] = Reference(72cc3a2c-1dda-4b95-b50a-0f7ac19640f4)
 * performer[PractitionerRole] = Reference(4b3b6f0f-a475-4b04-8a92-105e8ce6a7bf)
 * result[+] = Reference(4b8f899a-df12-4301-8287-9a77d46ded3d)
 * result[+] = Reference(f58819ff-d727-4740-a4ef-44eefc77022e)
 * result[+] = Reference(2fc2c078-825b-491d-9f8e-34926eb4f06f)
-* meta.security.code.value = $v3-Confidentiality#R
+* meta.security.code = $v3-Confidentiality#R
 * meta.security.display = "Restricted"
 
 
 Instance: efb1ed12-6a5d-4342-9572-861071644e46
-InstanceOf: MedComHomeCareDiagnosticReport
+InstanceOf: MedComHomeCareObservationDiagnosticReport
 Usage: #example
 Title: "HomeCareDiagnosticReport:TOBS and ABC examination"
 Description: "TOBS and ABC examination of Elmer"
@@ -100,7 +100,7 @@ Description: "TOBS and ABC examination of Elmer"
 * code.coding = $DiagnosticReportCodeSystem#HomeCareReport
 * subject = Reference(bbcd4817-1c4b-4089-a712-346f65ec16f9)
 * performer[ProducerOrganization] = Reference(a0330c62-fe29-4719-83fa-a94959084f29)
-* performer[PractitionerRole] = Reference( 4b3b6f0f-a475-4b04-8a92-105e8ce6a7bf)
+* performer[PractitionerRole] = Reference(4b3b6f0f-a475-4b04-8a92-105e8ce6a7bf)
 * result[+] = Reference(3fd3835d-1758-4d22-8547-000182752817)
 * result[+] = Reference(ba691ee4-6d38-4f5b-82f1-40b54e3b8ad1)
 * result[+] = Reference(8917f29d-269c-4bb3-8ce9-d255c351d52b)
@@ -109,16 +109,16 @@ Description: "TOBS and ABC examination of Elmer"
 * result[+] = Reference(f64a0a78-53cf-4a7f-9b89-4a2338a4935c)
 * conclusion = "ABCDE
 SeFølLyt-Princippet
-A.	RF 19 – påskyndet men regelmæssig, fri respiration. SAT 93%
+A.	RF 19 - påskyndet men regelmæssig, fri respiration. SAT 93%
 B.	Puls 92 palperet på venstre håndled. Fyldig regelmæssig. Fin kapilærrespons
-C.	BT 147/83 – klamtsvedende. Kolde ekstremiteter. 
+C.	BT 147/83 - klamtsvedende. Kolde ekstremiteter. 
 D.	Reagerer habituelt. Pupilreaktion i.a. VAS 7. Bl.s. 6,8
-E.	Temperatur 38,7 Målt rektalt "
+E.	Temperatur 38,7 Målt rektalt"
 
 
 // Modified diagostic repport 
 Instance: cfa9e95b-b5ac-4cfe-abe7-ea29e6b67919
-InstanceOf: MedComHomeCareDiagnosticReport
+InstanceOf: MedComHomeCareObservationDiagnosticReport
 Usage: #example
 Title: "Modified HomeCareDiagnosticReport:TOBS and ABC examination"
 Description: "Example of a modified HomeCareDiagnosticReport with TOBS and ABC examination of Elmer"
@@ -127,29 +127,27 @@ Description: "Example of a modified HomeCareDiagnosticReport with TOBS and ABC e
 * code.coding = $DiagnosticReportCodeSystem#HomeCareReport
 * subject = Reference(bbcd4817-1c4b-4089-a712-346f65ec16f9)
 * performer[ProducerOrganization] = Reference(a0330c62-fe29-4719-83fa-a94959084f29)
-* performer[PractitionerRole] = Reference( 4b3b6f0f-a475-4b04-8a92-105e8ce6a7bf)
+* performer[PractitionerRole] = Reference(4b3b6f0f-a475-4b04-8a92-105e8ce6a7bf)
 * result[+] = Reference(3fd3835d-1758-4d22-8547-000182752817)
 * result[+] = Reference(ba691ee4-6d38-4f5b-82f1-40b54e3b8ad1)
 * result[+] = Reference(8917f29d-269c-4bb3-8ce9-d255c351d52b)
 * result[+] = Reference(6bf03841-8397-4a2a-9f9a-8966b0cfa571)
 * result[+] = Reference(85fd1372-cf02-49c6-bd45-7205f5541a66)
 * result[+] = Reference(f64a0a78-53cf-4a7f-9b89-4a2338a4935c)
-* conclusion = "
-ABCDE
+* conclusion = "ABCDE
 SeFølLyt-Princippet
-A.	RF 19 – påskyndet men regelmæssig, fri respiration. SAT 93%
+A.	RF 19 - påskyndet men regelmæssig, fri respiration. SAT 93%
 B.	Puls 92 palperet på venstre håndled. Fyldig regelmæssig. Fin kapilærrespons
-C.	BT 147/83 – klamtsvedende. Kolde ekstremiteter. 
+C.	BT 147/83 - klamtsvedende. Kolde ekstremiteter. 
 D.	Reagerer habituelt. Pupilreaktion i.a. VAS 7. Bl.s. 6,8
 E.	Temperatur 38,7 Målt rektalt
 
 
-Patienten har nægtet at spise og drikke i løbet af dagen. 
-"
+Patienten har nægtet at spise og drikke i løbet af dagen."
 
 // Cancelled diagostic repport 
 Instance: 4f013d3a-575c-447d-83e1-7a5fb7f7b0de
-InstanceOf: MedComHomeCareDiagnosticReport
+InstanceOf: MedComHomeCareObservationDiagnosticReport
 Usage: #example
 Title: "Cancelled HomeCareDiagnosticReport: TOBS and ABC examination"
 Description: "Example of a cancelled HomeCareDiagnosticReport, with TOBS and ABC examination of Elmer"
@@ -158,13 +156,11 @@ Description: "Example of a cancelled HomeCareDiagnosticReport, with TOBS and ABC
 * code.coding = $DiagnosticReportCodeSystem#HomeCareReport
 * subject = Reference(bbcd4817-1c4b-4089-a712-346f65ec16f9)
 * performer[ProducerOrganization] = Reference(a0330c62-fe29-4719-83fa-a94959084f29)
-* performer[PractitionerRole] = Reference( 4b3b6f0f-a475-4b04-8a92-105e8ce6a7bf)
+* performer[PractitionerRole] = Reference(4b3b6f0f-a475-4b04-8a92-105e8ce6a7bf)
 * result[+] = Reference(3fd3835d-1758-4d22-8547-000182752817)
 * result[+] = Reference(ba691ee4-6d38-4f5b-82f1-40b54e3b8ad1)
 * result[+] = Reference(8917f29d-269c-4bb3-8ce9-d255c351d52b)
 * result[+] = Reference(6bf03841-8397-4a2a-9f9a-8966b0cfa571)
 * result[+] = Reference(85fd1372-cf02-49c6-bd45-7205f5541a66)
 * result[+] = Reference(f64a0a78-53cf-4a7f-9b89-4a2338a4935c)
-* conclusion = "
-Cancellation due to incorrect CPR-number!
-"
+* conclusion = "Cancellation due to incorrect CPR-number"
