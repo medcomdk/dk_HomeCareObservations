@@ -9,7 +9,7 @@ Description: "MessageHeader for HomeCareObservation"
 * destination[primary].receiver only Reference(MedComRequesterOrganization)
 * destination[primary].receiver ^type.aggregation = #bundled
 * sender only Reference(MedComProducerOrganization)
-* focus only Reference(MedComHomeCareDiagnosticReport)
+* focus only Reference(MedComHomeCareObservationDiagnosticReport)
 * definition 1..1 MS
 * definition = "http://medcomfhir.dk/ig/messagedefinitions/ImplementationGuide/medcom.fhir.dk.messagedefinitions/StructureDefinition/medcom-homecareobservation-messagedefinition"
 
@@ -33,7 +33,7 @@ Usage: #example
 * focus = Reference(870333ac-3134-4ae6-8257-86e0b0537c5f)
 
 * definition = "http://medcomfhir.dk/ig/messagedefinitions/ImplementationGuide/medcom.fhir.dk.messagedefinitions/StructureDefinition/medcom-homecareobservation-messagedefinition"
-
+/*
 Alias: $message-events = http://example.org/fhir/message-events
 Alias: $message-reasons-encounter = http://terminology.hl7.org/CodeSystem/message-reasons-encounter
 
