@@ -6,7 +6,7 @@ Description: "This resource is intenden to be used in relation with a HomeCareOb
 * conclusion ^short = "A comment relevant for all observations in the report and necessary to interpret and understand the results (Danish:Klinisk kommentar)."
 * result only Reference(MedComHomeCareObservation)
 * result ^type.aggregation = #bundled
-* status.value = #final
+* status = #final
 * performer 2..2 MS
 * performer only Reference(MedComProducerOrganization or MedComCorePractitionerRole)
 * performer ^slicing.discriminator.type = #profile
@@ -122,7 +122,7 @@ InstanceOf: MedComHomeCareObservationDiagnosticReport
 Usage: #example
 Title: "Modified HomeCareDiagnosticReport:TOBS and ABC examination"
 Description: "Example of a modified HomeCareDiagnosticReport with TOBS and ABC examination of Elmer"
-* status = $StatusCodeDiagnosticReport#corrected
+* status = $StatusCodeDiagnosticReport#final
 * issued = 2023-09-12T12:34:00+02:00
 * code.coding = $DiagnosticReportCodeSystem#HomeCareReport
 * subject = Reference(bbcd4817-1c4b-4089-a712-346f65ec16f9)
@@ -151,7 +151,7 @@ InstanceOf: MedComHomeCareObservationDiagnosticReport
 Usage: #example
 Title: "Cancelled HomeCareDiagnosticReport: TOBS and ABC examination"
 Description: "Example of a cancelled HomeCareDiagnosticReport, with TOBS and ABC examination of Elmer"
-* status = $StatusCodeDiagnosticReport#cancelled
+* status = $StatusCodeDiagnosticReport#final
 * issued = 2023-09-12T13:00:00+02:00
 * code.coding = $DiagnosticReportCodeSystem#HomeCareReport
 * subject = Reference(bbcd4817-1c4b-4089-a712-346f65ec16f9)

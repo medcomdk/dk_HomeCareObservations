@@ -8,6 +8,7 @@ Description: "This profile is intended to be used in HomeCareObservation to hold
 * valueString
   * ^maxLength = 12
 * valueQuantity 0..1 MS
+* valueQuantity.value MS
 * valueQuantity.value
   * ^maxLength = 12
 * code.coding[NPU].code from $NPUObservationCodesValueSet (preferred)
@@ -93,7 +94,7 @@ Instance: d2b89faa-979a-430d-8887-21ccdf6f238b
 InstanceOf: MedComHomeCareObservation
 Usage: #example
 Title: "Monocytes observation"
-Description: "Monocytes observation performed on o subject by the acute care team"
+Description: "Monocytes observation performed on a subject by the acute care team"
 * status = $ObsStatusCodeSystem#final
 * code.coding[NPU] = $NPU#NPU02840 "B—Monocytter; antalk. = ? × 109/L"
 * valueQuantity.value = 0.7
@@ -120,7 +121,7 @@ Instance: b22fcbe0-4977-433e-ad1c-d6545bc8c1cb
 InstanceOf: MedComHomeCareObservation
 Usage: #example
 Title: "Eosinofilocyt observation"
-Description: "Eosinofilocyt observation performed on a subject by the auce care team"
+Description: "Eosinofilocyt observation performed on a subject by the acute care team"
 * status = $ObsStatusCodeSystem#final
 * code.coding[NPU] = $NPU#NPU01933 "B—Eosinophilocytter; antalk. = ? × 109/L"
 * valueQuantity.value = 0.10
@@ -135,7 +136,7 @@ Instance: 1e2351e2-77df-4135-a77b-6a4c39e4a4ca
 InstanceOf: MedComHomeCareObservation
 Usage: #example
 Title: "Basofilocyt observation"
-Description: "Basofilocyt observation performed on a subject by the auce care team"
+Description: "Basofilocyt observation performed on a subject by the acute care team"
 * status = $ObsStatusCodeSystem#final
 * code.coding[NPU] = $NPU#NPU01349 "B—Basophilocytter; antalk. = ? × 109/L"
 * valueQuantity.value = 0.05
