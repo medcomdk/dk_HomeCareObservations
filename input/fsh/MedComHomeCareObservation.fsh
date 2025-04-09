@@ -17,6 +17,8 @@ Description: "This profile is intended to be used in HomeCareObservation to hold
 * interpretation 0..1 MS
 * interpretation from $obsInterpretationValueSet
 * interpretation.coding.code = #NI
+* text MS
+* text ^short = "A summary of the resource content. The narrative text shall always be included when exchanging a MedCom message. All MustSupport elements and extensions shall be included."
 // * obeys medcom-homecareObservation-1
  
 

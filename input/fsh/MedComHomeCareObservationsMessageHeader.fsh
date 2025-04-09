@@ -10,6 +10,8 @@ Description: "MessageHeader for HomeCareObservation"
 * destination[primary].receiver ^type.aggregation = #bundled
 * sender only Reference(MedComProducerOrganization)
 * focus only Reference(MedComHomeCareObservationDiagnosticReport)
+* text MS
+* text ^short = "A summary of the resource content. The narrative text shall always be included when exchanging a MedCom message. All MustSupport elements and extensions shall be included."
 * definition 1..1 MS
 * definition = "http://medcomfhir.dk/ig/messagedefinitions/ImplementationGuide/medcom.fhir.dk.messagedefinitions/StructureDefinition/medcom-homecareobservation-messagedefinition|1.1"
 
