@@ -1,10 +1,10 @@
 
 ### Scope and usage 
-The MedComHomeCareDiagnosticReport profile contains references to all observation results performed and produced by the municipal acute care team, with the purpose of sending the HomeCareObservation to citizens genereal practitioner. The MedComHomeCareDiagnosticReport is sent as a HomeCareObservation message. 
+The MedComHomeCareObservationDiagnosticReport profile contains references to all observation results performed and produced by the municipal acute care team, with the purpose of sending the HomeCareObservation to citizens genereal practitioner. The MedComHomeCareObservationDiagnosticReport is sent as a HomeCareObservation message. 
 
 <figure>
 <img alt="Form the HomeCareDiagnosticRepport is a MedComCorePatient and HomeCareObservation and a MedComObservationProducerOrganization. " src="./HomeCareObservation/HomeCareObsProfile.svg" style="float:none; display:block; margin-left:auto; margin-right:auto;" id="Fig1"/>
-<figcaption text-align="center"><b>Figure 1: Overview of the references between profiles in a MedCom HomeCareDiagnosticRepport profile </b></figcaption>
+<figcaption text-align="center"><b>Figure 1: Overview of the references between profiles in a MedComHomeCareObservationDiagnosticReport profile </b></figcaption>
 </figure>
 <br>
 <br>

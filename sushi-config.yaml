@@ -10,7 +10,7 @@ title: MedCom HomeCareObservation
 # title: Example Title
 # description: Example Implementation Guide for getting started with SUSHI
 status: active # draft | active | retired | unknown
-version: 1.0.0
+version: 1.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -24,10 +24,15 @@ publisher:
 dependencies:
   hl7.fhir.dk.core: 
     uri: https://hl7.dk/fhir/core/
-    version: 2.2.0
-  medcom.fhir.dk.terminology: 1.5.0
-  medcom.fhir.dk.core: 2.3.0
-  medcom.fhir.dk.messaging: 2.1.0
+    version: 3.2.0
+  # medcom.fhir.dk.terminology: 1.8.1
+  medcom.fhir.dk.terminology: current #Er current så længe terminologi IG ikke er udgivet.
+  medcom.fhir.dk.core: 2.4.0
+  medcom.fhir.dk.messaging: current #Er current så længe messaging IG ikke er udgivet.
+  # medcom.fhir.dk.messaging: 3.0.0
+  medcom.fhir.dk.messagedefinitions: current #Er current så længe messagedefinitions IG ikke er udgivet.
+  # medcom.fhir.dk.messagedefinitions: 1.0.0
+
 
 
   
@@ -39,7 +44,10 @@ menu:
   Artifacts: artifacts.html
   Downloads: downloads.html
 
+#parameters:
+#  apply-contact: true
+#  apply-jurisdiction: true
+#  apply-publisher: true
+
 parameters:
-  apply-contact: true
-  apply-jurisdiction: true
-  apply-publisher: true
+  special-url: [urn:oid:1.2.208.176.2.1]

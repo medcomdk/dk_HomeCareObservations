@@ -1,3 +1,0 @@
-## Scope and usage
-This profile is used as the MessageHeader resource for the MedCom HomeCareObservation message. Constraint and rules from MedComMessagingMessageHeader are inherited to this profile, but MedComHomeCareObservationMessageHeader is further restricted as it shall contain an focus in terms of the MedComHomeCareDiagnosticReport and the event code which shall be homecareobservation-message. 
-Further is MedComHomeCareObservationMessageHeader restricted as it shll contain MedComRequesterOrganization as receiver and MedComProducerOrganization as sender. 
