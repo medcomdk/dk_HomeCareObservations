@@ -1,9 +1,3 @@
-/* 
-Instanser anvendt til at generere eksempler 
-*/
-
-// Instancer til ny message
-
 Instance: 733cef33-3626-422b-955d-d506aaa65fe1
 InstanceOf: MedComCorePatient
 Title: "Bruno Test Elmer"
