@@ -29,23 +29,20 @@ Description: "This resource is intended to be used in relation with a HomeCareOb
 * meta.security 0..1 MS
 * meta.security = $v3-Confidentiality#R "Restricted"
 
-// TODO: Check if these invariants actually make any sense? Atleast the descriptions doesn't and needs to be updated
 Invariant: medcom-homecareReport-1
-Description: "There shall exist a practitioner role when using a PractitionerRole as author in a HomeCare Report."
+Description: "The practitioner, who performed the observations, must have a code"
 Severity: #error
 Expression: "reference.resolve().code.coding.code.exists()"
 
 Invariant: medcom-homecareReport-2
-Description: "There shall exist a name of the healtcare worker that performed the observations, as author in a HomeCare Report."
+Description: "The practitioner, who performed the observations, must have a name"
 Severity: #error
 Expression: "reference.resolve().practitioner.resolve().name.exists()"
 
 Invariant: medcom-homecareReport-3
-Description: "There shall exist a telecom to the organization form the healthcare worker is part of, as author in a HomeCare Report."
+Description: "The practitioner, who performed the observations, must have a phone number"
 Severity: #error
 Expression: "reference.resolve().practitioner.resolve().telecom.where(system = 'phone').exists()"
-
-
 
 Instance: 870333ac-3134-4ae6-8257-86e0b0537c5f
 InstanceOf: MedComHomeCareObservationDiagnosticReport
