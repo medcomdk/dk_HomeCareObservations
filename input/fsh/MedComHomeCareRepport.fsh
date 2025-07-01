@@ -26,7 +26,7 @@ Description: "This resource is intenden to be used in relation with a HomeCareOb
 * performer[PractitionerRole] obeys medcom-homecareReport-2
 * performer[PractitionerRole] obeys medcom-homecareReport-3
 * performer ^short = "Performer of the observations. Shall include a name, practitioner role, relevant telephone of the producer."
-* meta.security 0..1 MS SU
+* meta.security 0..1 MS
 * meta.security = $v3-Confidentiality#R "Restricted"
 
 Invariant: medcom-homecareReport-1
