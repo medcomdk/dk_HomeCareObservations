@@ -19,20 +19,7 @@ Description: "This profile is intended to be used in HomeCareObservation to hold
 * interpretation.coding.code = #NI
 * text MS
 * text ^short = "A summary of the resource content. The narrative text shall always be included when exchanging a MedCom message. All MustSupport elements and extensions shall be included."
-// * obeys medcom-homecareObservation-1
- 
 
-
-// Invariant: medcom-homecareObservation-1
-// Description: "There shall exist a Interpretation code 'Not Interpreted' when valueQuantity is sent. "
-// Expression: "if(valueQuantity.value.exists(),interpretation.coding.code = 'NI',true)"
-// Severity: #error
-
-
-
-
-// Instancer for observationer
-//Spotprøver
 Instance: 7fcb76a7-839b-4392-a2ff-f30035faca34
 InstanceOf: MedComHomeCareObservation
 Usage: #example

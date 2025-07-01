@@ -2,7 +2,7 @@ Profile: MedComHomeCareObservationDiagnosticReport
 Parent: MedComCoreDiagnosticReport
 Id: medcom-homecareobservation-diagnosticreport
 Title: "MedComHomeCareObservationDiagnosticReport"
-Description: "This resource is intenden to be used in relation with a HomeCareObservation message"
+Description: "This resource is intended to be used in relation with a HomeCareObservation message"
 * conclusion ^short = "A comment relevant for all observations in the report and necessary to interpret and understand the results (Danish:Klinisk kommentar)."
 * result only Reference(MedComHomeCareObservation)
 * result ^type.aggregation = #bundled
@@ -29,6 +29,7 @@ Description: "This resource is intenden to be used in relation with a HomeCareOb
 * meta.security 0..1 MS
 * meta.security = $v3-Confidentiality#R "Restricted"
 
+// TODO: Check if these invariants actually make any sense? Atleast the descriptions doesn't and needs to be updated
 Invariant: medcom-homecareReport-1
 Description: "There shall exist a practitioner role when using a PractitionerRole as author in a HomeCare Report."
 Severity: #error

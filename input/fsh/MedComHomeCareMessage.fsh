@@ -2,7 +2,7 @@ Profile: MedComHomeCareObservationMessage
 Parent: MedComMessagingMessage
 Id: medcom-homecareobservation-message
 Title: "MedComHomeCareObservationMessage"
-Description: "The HomeCareObservation Message is used exchange of the observations results performed by the municipal acute care team to the general practitioner."
+Description: "The HomeCareObservation Message is used in exchange of the observations results performed by the municipal acute care team to the general practitioner."
 * obeys medcom-homecareObsMessage-1
 * obeys medcom-homecareObsMessage-2
 
