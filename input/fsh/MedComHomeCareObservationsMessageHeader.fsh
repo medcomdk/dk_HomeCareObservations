@@ -13,6 +13,7 @@ Description: "MessageHeader for HomeCareObservation"
 * text MS
 * text ^short = "A summary of the resource content. The narrative text shall always be included when exchanging a MedCom message. All MustSupport elements and extensions shall be included."
 * definition 1..1 MS
+// TODO: Make a constraint here with an expression that ensures we point to https://medcomfhir.dk/ig/messagedefinitions/MessageDefinition-MedComHomeCareObservationMessageDefinition1.x where the x could be anything
 
 Instance: b4e7e16b-9658-4172-acd7-5e7193f2cc5f
 InstanceOf: MedComMessagingDestinationUseExtension
