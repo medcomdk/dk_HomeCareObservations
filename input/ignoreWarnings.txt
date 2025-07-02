@@ -3,3 +3,9 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+
+# The perfomer is placed onto the DiagnosticReport and not the Observation itself
+%Best Practice Recommendation: In general, all observations should have a performer
+
+# Known errors. They are examples and therefore don't exist in a bundle and are invalid
+%Reference is external which isn't supported by the specified aggregation mode(s) for the reference (bundled)

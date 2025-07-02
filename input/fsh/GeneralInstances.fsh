@@ -13,6 +13,7 @@ Instance: ef5cb9a6-835f-4d18-a34e-179c578b9a2a
 InstanceOf: MedComProducerOrganization 
 Title: "Example of a sender organization with a SOR, an EAN identifier, and ProdcentID"
 Description: "Example of an organization with a SOR and an EAN identifier."
+Usage: #example
 * identifier[SOR-ID].value = "1144561000016002" 
 * identifier[EAN-ID].value = "5790000123117" 
 * identifier[ProducentID].system = $ProducenID
@@ -26,6 +27,7 @@ Instance: 42541447-b58c-4a1a-9514-02b80494bbd3
 InstanceOf: MedComRequesterOrganization 
 Title: "Example of a reciever organization with a SOR, an EAN  and Ydrenummer identifier."
 Description: "Example of an organization with a SOR and an EAN and Ydrenummer identifier."
+Usage: #example
 * identifier[SOR-ID].value = "52581000016005" 
 * identifier[EAN-ID].value = "5790000127092"
 * identifier[Ydernummer].value = "061654"
@@ -38,6 +40,7 @@ Instance: b56708c6-2df3-4e4a-a110-2f924b9fc072
 InstanceOf: MedComCorePractitioner
 Title: "Acute nurse"
 Description: "Acute nurse"
+Usage: #example
 * name.given = "Mia"
 * telecom.system = #phone
 * telecom.value = "+45 05577668"
@@ -48,6 +51,7 @@ Instance: 6ff69f1c-690d-11ed-9022-0242ac120002
 InstanceOf: MedComCorePractitionerRole
 Title: "PractitionerRole with a role and reference to a practitioner"
 Description: "PractitionerRole with a role and reference to a practitioner"
+Usage: #example
 * practitioner = Reference(b56708c6-2df3-4e4a-a110-2f924b9fc072)
 * code = $PractitionerRole#sygeplejerske
 
@@ -81,6 +85,7 @@ Instance: 72cc3a2c-1dda-4b95-b50a-0f7ac19640f4
 InstanceOf: MedComProducerOrganization 
 Title: "Example of a sender organization with a SOR, and an EAN identifier and producentID."
 Description: "Example of an organization with a SOR, an EAN identifier and ProducentID."
+Usage: #example
 * identifier[SOR-ID].value = "1144561000016002" 
 * identifier[EAN-ID].value = "5790000123117" 
 * identifier[ProducentID].system = $ProducenID
@@ -94,6 +99,7 @@ Instance: d1c1fa90-2c7e-4dd7-b2e8-e40281635a98
 InstanceOf: MedComRequesterOrganization 
 Title: "Example of a reciever organization with a SOR, an EAN  and Ydrenummer identifier."
 Description: "Example of an organization with a SOR and an EAN and Ydrenummer identifier."
+Usage: #example
 * identifier[SOR-ID].value = "52581000016005" 
 * identifier[EAN-ID].value = "5790000127092"
 * identifier[Ydernummer].value = "061654"
@@ -106,6 +112,7 @@ Instance: be9f367d-a84a-4815-90a8-c83a03813fd8
 InstanceOf: MedComCorePractitioner
 Title: "Acute nurse"
 Description: "Acute nurse"
+Usage: #example
 * name.given = "Mia"
 * telecom.system = #phone
 * telecom.value = "+45 05577668"
@@ -116,6 +123,7 @@ Instance: 4b3b6f0f-a475-4b04-8a92-105e8ce6a7bf
 InstanceOf: MedComCorePractitionerRole
 Title: "PractitionerRole with a role and reference to a practitioner"
 Description: "PractitionerRole with a role and reference to a practitioner"
+Usage: #example
 * practitioner = Reference(be9f367d-a84a-4815-90a8-c83a03813fd8)
 * code = $PractitionerRole#sygeplejerske
 
@@ -135,9 +143,9 @@ Usage: #example
 
 Instance: cb277ee2-5d96-4762-829d-d36449b2b17f
 InstanceOf: MedComCoreMedia
-Usage: #example
 Title: "Normal EKG"
 Description: "An example of an EKG that can be sendt with an diagnostic repport"
+Usage: #example
 * status = $mediastatus#completed
 * operator = Reference(6ff69f1c-690d-11ed-9022-0242ac120002)
 * content.title = "EKG"
@@ -165,6 +173,7 @@ Instance: a0330c62-fe29-4719-83fa-a94959084f29
 InstanceOf: MedComProducerOrganization 
 Title: "Example of a sender organization with a SOR, and an EAN identifier and producentID."
 Description: "Example of an organization with a SOR, an EAN identifier and ProducentID."
+Usage: #example
 * identifier[SOR-ID].value = "1144561000016002" 
 * identifier[EAN-ID].value = "5790000123117" 
 * identifier[ProducentID].system = $ProducenID
@@ -178,6 +187,7 @@ Instance: 1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1
 InstanceOf: MedComRequesterOrganization 
 Title: "Example of a reciever organization with a SOR, an EAN  and Ydrenummer identifier."
 Description: "Example of an organization with a SOR and an EAN and Ydrenummer identifier."
+Usage: #example
 * identifier[SOR-ID].value = "52581000016005" 
 * identifier[EAN-ID].value = "5790000127092"
 * identifier[Ydernummer].value = "061654"
@@ -190,6 +200,7 @@ Instance: 70f14d25-0979-4192-8da2-0c0a3950f4b1
 InstanceOf: MedComCorePractitioner
 Title: "Acute nurse"
 Description: "Acute nurse"
+Usage: #example
 * name.given = "Mia"
 * telecom.system = #phone
 * telecom.value = "+45 05577668"
@@ -200,6 +211,7 @@ Instance: 80284c01-1674-45ca-98b7-d1e669bdeff6
 InstanceOf: MedComCorePractitionerRole
 Title: "PractitionerRole with a role and reference to a practitioner"
 Description: "PractitionerRole with a role and reference to a practitioner"
+Usage: #example
 * practitioner = Reference(70f14d25-0979-4192-8da2-0c0a3950f4b1)
 * code = $PractitionerRole#sygeplejerske
 
