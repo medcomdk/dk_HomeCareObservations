@@ -2,7 +2,8 @@ Profile: MedComHomeCareObservationDiagnosticReport
 Parent: MedComCoreDiagnosticReport
 Id: medcom-homecareobservation-diagnosticreport
 Title: "MedComHomeCareObservationDiagnosticReport"
-Description: "This resource is intenden to be used in relation with a HomeCareObservation message"
+Description: "This resource is intended to be used in relation with a HomeCareObservation message"
+* ^experimental = true
 * conclusion ^short = "A comment relevant for all observations in the report and necessary to interpret and understand the results (Danish:Klinisk kommentar)."
 * result only Reference(MedComHomeCareObservation)
 * result ^type.aggregation = #bundled
@@ -26,32 +27,30 @@ Description: "This resource is intenden to be used in relation with a HomeCareOb
 * performer[PractitionerRole] obeys medcom-homecareReport-2
 * performer[PractitionerRole] obeys medcom-homecareReport-3
 * performer ^short = "Performer of the observations. Shall include a name, practitioner role, relevant telephone of the producer."
-* meta.security 0..1 MS SU
+* meta.security 0..1 MS
 * meta.security = $v3-Confidentiality#R "Restricted"
 
 Invariant: medcom-homecareReport-1
-Description: "There shall exist a practitioner role when using a PractitionerRole as author in a HomeCare Report."
+Description: "The practitioner, who performed the observations, must have a code"
 Severity: #error
 Expression: "reference.resolve().code.coding.code.exists()"
 
 Invariant: medcom-homecareReport-2
-Description: "There shall exist a name of the healtcare worker that performed the observations, as author in a HomeCare Report."
+Description: "The practitioner, who performed the observations, must have a name"
 Severity: #error
 Expression: "reference.resolve().practitioner.resolve().name.exists()"
 
 Invariant: medcom-homecareReport-3
-Description: "There shall exist a telecom to the organization form the healthcare worker is part of, as author in a HomeCare Report."
+Description: "The practitioner, who performed the observations, must have a phone number"
 Severity: #error
 Expression: "reference.resolve().practitioner.resolve().telecom.where(system = 'phone').exists()"
-
-
 
 Instance: 870333ac-3134-4ae6-8257-86e0b0537c5f
 InstanceOf: MedComHomeCareObservationDiagnosticReport
 Usage: #example
 Title: "HomeCareDiagnosticReport: spot test and EKG"
 Description: "Spot test and EKG performed by the acute care team on a subject."
-* status = $StatusCodeDiagnosticReport#final
+* status = #final
 * issued = 2023-09-12T12:24:08+02:00
 * code = $DiagnosticReportCodeSystem#HomeCareReport
 * subject = Reference(733cef33-3626-422b-955d-d506aaa65fe1)
@@ -77,7 +76,7 @@ InstanceOf: MedComHomeCareObservationDiagnosticReport
 Usage: #example
 Title: "HomeCareDiagnosticReport: Urine dipsticks tests and refused consent"
 Description: "Urine dipstick tests performed by the acute care team on a subject, that has refused consent."
-* status = $StatusCodeDiagnosticReport#final
+* status = #final
 * issued = 2023-09-12T12:24:08+02:00
 * code.coding = $DiagnosticReportCodeSystem#HomeCareReport
 * subject = Reference(733cef33-3626-422b-955d-d506aaa65fe1)
@@ -95,7 +94,7 @@ InstanceOf: MedComHomeCareObservationDiagnosticReport
 Usage: #example
 Title: "HomeCareDiagnosticReport:TOBS and ABC examination"
 Description: "TOBS and ABC examination of Elmer"
-* status = $StatusCodeDiagnosticReport#final
+* status = #final
 * issued = 2023-09-12T12:24:19+02:00
 * code.coding = $DiagnosticReportCodeSystem#HomeCareReport
 * subject = Reference(bbcd4817-1c4b-4089-a712-346f65ec16f9)
@@ -122,7 +121,7 @@ InstanceOf: MedComHomeCareObservationDiagnosticReport
 Usage: #example
 Title: "Modified HomeCareDiagnosticReport:TOBS and ABC examination"
 Description: "Example of a modified HomeCareDiagnosticReport with TOBS and ABC examination of Elmer"
-* status = $StatusCodeDiagnosticReport#final
+* status = #final
 * issued = 2023-09-12T12:34:00+02:00
 * code.coding = $DiagnosticReportCodeSystem#HomeCareReport
 * subject = Reference(bbcd4817-1c4b-4089-a712-346f65ec16f9)
@@ -151,7 +150,7 @@ InstanceOf: MedComHomeCareObservationDiagnosticReport
 Usage: #example
 Title: "Cancelled HomeCareDiagnosticReport: TOBS and ABC examination"
 Description: "Example of a cancelled HomeCareDiagnosticReport, with TOBS and ABC examination of Elmer"
-* status = $StatusCodeDiagnosticReport#final
+* status = #final
 * issued = 2023-09-12T13:00:00+02:00
 * code.coding = $DiagnosticReportCodeSystem#HomeCareReport
 * subject = Reference(bbcd4817-1c4b-4089-a712-346f65ec16f9)

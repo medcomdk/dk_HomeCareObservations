@@ -2,10 +2,10 @@ Profile: MedComHomeCareObservationMessage
 Parent: MedComMessagingMessage
 Id: medcom-homecareobservation-message
 Title: "MedComHomeCareObservationMessage"
-Description: "The HomeCareObservation Message is used exchange of the observations results performed by the municipal acute care team to the general practitioner."
+Description: "The HomeCareObservation Message is used in exchange of the observations results performed by the municipal acute care team to the general practitioner."
 * obeys medcom-homecareObsMessage-1
 * obeys medcom-homecareObsMessage-2
-
+* ^experimental = true
 
 Invariant: medcom-homecareObsMessage-1
 Description: "The MessageHeader shall conform to medcom-homecareobservation-messageheader profile"
@@ -134,9 +134,6 @@ Usage: #example
 * entry[+].fullUrl = "http://medcomfhir.dk/ig/homecareobservation/Observation/f64a0a78-53cf-4a7f-9b89-4a2338a4935c"
 * entry[=].resource = f64a0a78-53cf-4a7f-9b89-4a2338a4935c
 
-
-
-
 Instance: 73996cdc-3192-4d15-bd16-c365ef0085e7
 InstanceOf: MedComHomeCareObservationMessage
 Title: "Modified HomeCareObservation message."
@@ -158,8 +155,6 @@ Usage: #example
 * entry[=].resource = 1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1
 * entry[+].fullUrl = "http://medcomfhir.dk/ig/homecareobservation/Organization/a0330c62-fe29-4719-83fa-a94959084f29"
 * entry[=].resource = a0330c62-fe29-4719-83fa-a94959084f29
-* entry[+].fullUrl = "http://medcomfhir.dk/ig/homecareobservation/Provenance/008e1c02-605d-458e-8cb8-3eeb16a69aac"
-* entry[=].resource = 008e1c02-605d-458e-8cb8-3eeb16a69aac
 * entry[+].fullUrl = "http://medcomfhir.dk/ig/homecareobservation/Provenance/8ce47645-4d69-4fa6-a51d-c2bb49d87efb"
 * entry[=].resource = 8ce47645-4d69-4fa6-a51d-c2bb49d87efb
 * entry[+].fullUrl = "http://medcomfhir.dk/ig/homecareobservation/Observation/3fd3835d-1758-4d22-8547-000182752817"
@@ -198,8 +193,6 @@ Usage: #example
 * entry[=].resource = 1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1
 * entry[+].fullUrl = "http://medcomfhir.dk/ig/homecareobservation/Organization/a0330c62-fe29-4719-83fa-a94959084f29"
 * entry[=].resource = a0330c62-fe29-4719-83fa-a94959084f29
-* entry[+].fullUrl = "http://medcomfhir.dk/ig/homecareobservation/Provenance/008e1c02-605d-458e-8cb8-3eeb16a69aac"
-* entry[=].resource = 008e1c02-605d-458e-8cb8-3eeb16a69aac
 * entry[+].fullUrl = "http://medcomfhir.dk/ig/homecareobservation/Provenance/babb316c-796c-4d10-b97b-45274b5a0c44"
 * entry[=].resource = babb316c-796c-4d10-b97b-45274b5a0c44
 * entry[+].fullUrl = "http://medcomfhir.dk/ig/homecareobservation/Observation/3fd3835d-1758-4d22-8547-000182752817"
