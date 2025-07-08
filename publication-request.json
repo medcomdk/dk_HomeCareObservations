@@ -6,5 +6,5 @@
     "sequence": "Release 1.x.x",
     "mode" : "milestone",
     "descmd": "@release-notes.md",
-    "desc": "Actual first release - 1.0.0 was released by mistake and is not in use."
+    "desc": "First trial release - 1.0.0 was released by mistake and is not in use and should not be used."
 }
