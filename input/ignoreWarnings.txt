@@ -4,8 +4,29 @@
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
+# This is an experimental release, so it is expected
+%Reference to experimental CodeSystem http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-observation-codes%
+
+# This is an experimental release, so it is expected
+%Reference to experimental CodeSystem http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes%
+
+# This is an experimental release, so it is expected
+%Reference to experimental CodeSystem urn:oid:1.2.208.176.2.1%
+
+# This is an experimental release, so it is expected
+%Reference to experimental CodeSystem http://medcomfhir.dk/ig/terminology/CodeSystem/MedComDiagnosticReportCodes%
+
+# Is not a problem with homecareobservation, but rather hl7 dk core
+%No definition could be found for URL value 'https://www.gs1.org/gln'
+
+# Is not a problem with homecareobservation, but rather hl7 dk core
+%No definition could be found for URL value 'urn:oid:1.2.208.176.1.1'
+
+# Is not a problem with homecareobservation, but rather hl7 dk core
+%No definition could be found for URL value 'urn:oid:1.2.208.176.1.4'
+
 # The perfomer is placed onto the DiagnosticReport and not the Observation itself
 %Best Practice Recommendation: In general, all observations should have a performer
 
-# Known errors. They are examples and therefore don't exist in a bundle and are invalid
+# Known error. This is an example and therefore don't exist in a bundle and is expectedly invalid
 %Reference is external which isn't supported by the specified aggregation mode(s) for the reference (bundled)

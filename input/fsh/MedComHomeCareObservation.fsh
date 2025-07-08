@@ -3,6 +3,7 @@ Parent: MedComCoreObservation
 Id: medcom-homecare-observation
 Title: "MedComHomeCareObservation"
 Description: "This profile is intended to be used in HomeCareObservation to hold information about the observation results."
+* ^experimental = true
 * effectiveDateTime MS
 * valueString 0..1 MS
 * valueString
@@ -12,7 +13,7 @@ Description: "This profile is intended to be used in HomeCareObservation to hold
 * valueQuantity.value
   * ^maxLength = 12
 * code.coding[NPU].code from $NPUObservationCodesValueSet (preferred)
-* code.coding[MedCom].code from $MedcomCodes (preferred)
+* code.coding[MedCom].code from $MedcomObservationVS (preferred)
 * code.coding.display MS
 * interpretation 0..1 MS
 * interpretation from $obsInterpretationValueSet
@@ -26,13 +27,12 @@ Title: "C-reaktive protein [CRP];P"
 Description: "C-reaktive protein [CRP] test performed by acute care team on the subject."
 Usage: #example
 * status = $ObsStatusCodeSystem#final
-* code.coding = $NPU#NPU19748 "P—C-reaktivt protein; massek. = ? mg/L"
+* code.coding[NPU] = $NPUObservationCodes#NPU19748 "P—C-reaktivt protein; massek. = ? mg/L"
 * valueQuantity.value = 26
 * valueQuantity.unit = "mg/L"
 * effectiveDateTime = 2023-09-12T10:24:08+02:00
 * subject = Reference(733cef33-3626-422b-955d-d506aaa65fe1)
 * interpretation.coding = $obsInterpretation#NI "Not Interpreted"
-
 
 Instance: f70ae8b7-c1af-44a2-a21a-570c552dd7cc
 InstanceOf: MedComHomeCareObservation
@@ -40,16 +40,12 @@ Title: "Observation of the haemoglobin"
 Description: "Observation of the haemoglobin"
 Usage: #example
 * status = $ObsStatusCodeSystem#final
-* code.coding[NPU].code = #NPU02319	
-* code.coding[NPU].display = "B—Hæmoglobin(Fe); stofk. = ? mmol/L"
+* code.coding[NPU].code = $NPUObservationCodes#NPU02319 "B—Hæmoglobin(Fe); stofk. = ? mmol/L"
 * valueQuantity.value = 7.8
 * valueQuantity.unit = "mmol/L"
 * effectiveDateTime = 2023-09-12T10:25:08+02:00
 * subject = Reference(733cef33-3626-422b-955d-d506aaa65fe1)
 * interpretation.coding = $obsInterpretation#NI "Not Interpreted"
-
-
-
 
 Instance: 1b089a05-0a5f-479d-9cbd-921a13470221
 InstanceOf: MedComHomeCareObservation
@@ -57,7 +53,7 @@ Title: "Leukocyt Observation"
 Description: "Test of leucocyte on the subject by acute care team"
 Usage: #example
 * status = $ObsStatusCodeSystem#final
-* code.coding[NPU] = $NPU#NPU02593 "B—Leukocytter; antalk. = ? × 109/L"
+* code.coding[NPU] = $NPUObservationCodes#NPU02593 "B—Leukocytter; antalk. = ? × 10^9/L"
 * valueQuantity.value = 9.1
 * valueQuantity.unit = "10^9/L"
 * effectiveDateTime = 2023-09-12T10:27:08+02:00
@@ -70,14 +66,12 @@ Title: "Lymphocyte observation"
 Description: "Lymphocyte observation on the subject by acute care team"
 Usage: #example
 * status = $ObsStatusCodeSystem#final
-* code.coding[NPU] = $NPU#NPU02636 "B—Lymphocytter; antalk. = ? × 109/L"
+* code.coding[NPU] = $NPUObservationCodes#NPU02636 "B—Leukocytter; antalk. = ? × 10^9/L"
 * valueQuantity.value = 2.6
 * valueQuantity.unit = "10^9/L"
 * effectiveDateTime = 2023-09-12T10:30:08+02:00
 * subject = Reference(733cef33-3626-422b-955d-d506aaa65fe1)
 * interpretation.coding = $obsInterpretation#NI "Not Interpreted"
-
-
 
 Instance: d2b89faa-979a-430d-8887-21ccdf6f238b
 InstanceOf: MedComHomeCareObservation
@@ -85,7 +79,7 @@ Title: "Monocytes observation"
 Description: "Monocytes observation performed on a subject by the acute care team"
 Usage: #example
 * status = $ObsStatusCodeSystem#final
-* code.coding[NPU] = $NPU#NPU02840 "B—Monocytter; antalk. = ? × 109/L"
+* code.coding[NPU] = $NPUObservationCodes#NPU02840 "B—Monocytter; antalk. = ? × 10^9/L"
 * valueQuantity.value = 0.7
 * valueQuantity.unit = "10^9/L"
 * effectiveDateTime = 2023-09-12T10:32:08+02:00
@@ -98,13 +92,12 @@ Title: "Neutrophilocytes observation"
 Description: "Neutrophilocytes observation performed on o subject by the acute care team"
 Usage: #example
 * status = $ObsStatusCodeSystem#final
-* code.coding[NPU] = $NPU#NPU02902 "B—Neutrophilocytter; antalk. = ? × 109/L"
+* code.coding[NPU] = $NPUObservationCodes#NPU02902 "B—Neutrophilocytter; antalk. = ? × 10^9/L"
 * valueQuantity.value = 10.1
 * valueQuantity.unit = "10^9/L"
 * effectiveDateTime = 2023-09-12T10:34:08+02:00
 * subject = Reference(733cef33-3626-422b-955d-d506aaa65fe1)
 * interpretation.coding = $obsInterpretation#NI "Not Interpreted"
-
 
 Instance: b22fcbe0-4977-433e-ad1c-d6545bc8c1cb
 InstanceOf: MedComHomeCareObservation
@@ -112,14 +105,12 @@ Title: "Eosinofilocyt observation"
 Description: "Eosinofilocyt observation performed on a subject by the acute care team"
 Usage: #example
 * status = $ObsStatusCodeSystem#final
-* code.coding[NPU] = $NPU#NPU01933 "B—Eosinophilocytter; antalk. = ? × 109/L"
+* code.coding[NPU] = $NPUObservationCodes#NPU01933 "B—Eosinophilocytter; antalk. = ? × 10^9/L"
 * valueQuantity.value = 0.10
 * valueQuantity.unit = "10^9/L"
 * effectiveDateTime = 2023-09-12T10:36:08+02:00
 * subject = Reference(733cef33-3626-422b-955d-d506aaa65fe1)
 * interpretation.coding = $obsInterpretation#NI "Not Interpreted"
-
-
 
 Instance: 1e2351e2-77df-4135-a77b-6a4c39e4a4ca
 InstanceOf: MedComHomeCareObservation
@@ -127,7 +118,7 @@ Title: "Basofilocyt observation"
 Description: "Basofilocyt observation performed on a subject by the acute care team"
 Usage: #example
 * status = $ObsStatusCodeSystem#final
-* code.coding[NPU] = $NPU#NPU01349 "B—Basophilocytter; antalk. = ? × 109/L"
+* code.coding[NPU] = $NPUObservationCodes#NPU01349 "B—Basophilocytter; antalk. = ? × 10^9/L"
 * valueQuantity.value = 0.05
 * valueQuantity.unit = "10^9/L"
 * effectiveDateTime = 2023-09-12T10:38:08+02:00
@@ -140,13 +131,12 @@ Title: "Glucose measurement"
 Description: "Glucose measurement on the subject. "
 Usage: #example
 * status = $ObsStatusCodeSystem#final
-* code.coding[NPU] = $NPU#NPU22089 "P(kB)—Glucose; stofk. = ? mmol/L"
+* code.coding[NPU] = $NPUObservationCodes#NPU22089 "P(kB)—Glucose; stofk. = ? mmol/L"
 * valueQuantity.value = 6.8
 * valueQuantity.unit = "mmol/L"
 * effectiveDateTime = 2023-09-12T10:40:08+02:00
 * subject = Reference(733cef33-3626-422b-955d-d506aaa65fe1)
 * interpretation.coding = $obsInterpretation#NI "Not Interpreted"
-
 
 Instance: 470d39e4-d3f9-4301-82eb-b957ba33475e
 InstanceOf: MedComHomeCareObservation
@@ -154,7 +144,7 @@ Title: "Coagulation factor test"
 Description: "Coagulation factor on the subject"
 Usage: #example
 * status = $ObsStatusCodeSystem#final
-* code.coding[NPU] = $NPU#NPU01685 "P—Koagulation, vævsfaktor-induceret; rel.tid(aktuel/norm; INR; IRP 67/40; proc.) = ?"
+* code.coding[NPU] = $NPUObservationCodes#NPU01685 "P—Koagulation, vævsfaktor-induceret; rel.tid(aktuel/norm; INR; IRP 67/40; proc.) = ?"
 * valueQuantity.value = 0.9
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum
@@ -162,15 +152,13 @@ Usage: #example
 * subject = Reference(733cef33-3626-422b-955d-d506aaa65fe1)
 * interpretation.coding = $obsInterpretation#NI "Not Interpreted"
 
-
-//Urinstix
 Instance: 4b8f899a-df12-4301-8287-9a77d46ded3d
 InstanceOf: MedComHomeCareObservation
 Title: "Urine dipstick tests"
 Description: "Urine dipstick tests on Bruno "
 Usage: #example
 * status = $ObsStatusCodeSystem#final
-* code.coding[NPU] = $NPU#NPU04206 "U—Protein; arb.k.(proc.) = ?"
+* code.coding[NPU] = $NPUObservationCodes#NPU04206 "U—Protein; arb.k.(proc.) = ?"
 * valueQuantity.value = 1
 * valueQuantity.unit = "+"
 * effectiveDateTime = 2023-09-13T12:24:08+02:00
@@ -183,7 +171,7 @@ Title: "Nitrite observation"
 Description: "Nitrit observation on Bruno"
 Usage: #example
 * status = $ObsStatusCodeSystem#final
-* code.coding[NPU] = $NPU#NPU21578 "U—Nitrit; arb.k.(proc.) = ?"
+* code.coding[NPU] = $NPUObservationCodes#NPU21578 "U—Nitrit; arb.k.(proc.) = ?"
 * valueString = "Negative" 
 * effectiveDateTime = 2023-09-13T12:24:08+02:00
 * subject = Reference(733cef33-3626-422b-955d-d506aaa65fe1)
@@ -195,21 +183,20 @@ Title: "Leukocyt urine test"
 Description: "Test of leucocyt using urine dipstick"
 Usage: #example
 * status = $ObsStatusCodeSystem#final
-* code.coding[NPU] = $NPU#NPU03987 "U—Leukocytter; arb.k.(proc.) = ?"
+* code.coding[NPU] = $NPUObservationCodes#NPU03987 "U—Leukocytter; arb.k.(proc.) = ?"
 * valueQuantity.value = 2
 * valueQuantity.unit = "+"
 * effectiveDateTime = 2023-09-13T12:24:08+02:00
 * subject = Reference(733cef33-3626-422b-955d-d506aaa65fe1)
 * interpretation.coding = $obsInterpretation#NI "Not Interpreted"
 
-// TOBS
 Instance: 3fd3835d-1758-4d22-8547-000182752817
 InstanceOf: MedComHomeCareObservation
 Title: "Respiration frequency"
 Description: "Respiration frequency of Elmer"
 Usage: #example
 * status = $ObsStatusCodeSystem#final
-* code.coding[MedCom] = #MCS88122 "Pt—Respiration; frekvens = ? X 1/min"
+* code.coding[MedCom] = $MedComObservationCS#MCS88122
 * valueQuantity.value = 19
 * valueQuantity.unit = "1/min"
 * effectiveDateTime = 2023-09-13T09:24:08+02:00
@@ -222,7 +209,7 @@ Title: "Heart Rate"
 Description: "HeartRate of Elmer"
 Usage: #example
 * status = $ObsStatusCodeSystem#final
-* code.coding[NPU] = $NPU#NPU21692 "Hjerte—Systole; frekv. = ? × 1/min"
+* code.coding[NPU] = $NPUObservationCodes#NPU21692 "Hjerte—Systole; frekv. = ? × 1/min"
 * valueQuantity.value = 92
 * valueQuantity.unit = "1/min"
 * note.text = "Patienten har været ud og går lige inden målingen."
@@ -236,7 +223,7 @@ Title: "Systolic Blood Pressure"
 Description: "Systolic Blood Pressure of Elmer"
 Usage: #example
 * status = $ObsStatusCodeSystem#final 
-* code.coding[NPU] = #DNK05472 "Arm—Blodtryk(systolisk); tryk = ? mmHg"
+* code.coding[NPU] = $NPUObservationCodes#DNK05472 "Arm—Blodtryk(systolisk); tryk = ? mmHg"
 * valueQuantity.value = 147
 * valueQuantity.unit = "mmHg"
 * effectiveDateTime = 2023-09-13T09:24:10+02:00
@@ -249,7 +236,7 @@ Title: "Consciousness"
 Description: "Consciousness of Elmer"
 Usage: #example
 * status = $ObsStatusCodeSystem#final
-* code.coding[MedCom] = #MCS88126 "Pt—Bevidsthedsniveau; arb.antal(værdi 0-3) = ?"
+* code.coding[MedCom] = $MedComObservationCS#MCS88126
 * valueQuantity.value = 0
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum
@@ -263,7 +250,7 @@ Title: "Temperature"
 Description: "Temperature of Elmer"
 Usage: #example
 * status = $ObsStatusCodeSystem#final
-* code.coding[NPU] = $NPU#NPU08676 "Pt—Legeme; temp. = ? °C"
+* code.coding[NPU] = $NPUObservationCodes#NPU08676 "Pt—Legeme; temp. = ? °C"
 * valueQuantity.value = 38.7
 * valueQuantity.unit = "°C"
 * effectiveDateTime = 2023-09-13T09:24:12+02:00
@@ -276,8 +263,7 @@ Title: "TOBS"
 Description: "TOBS of Elmer"
 Usage: #example
 * status = $ObsStatusCodeSystem#final
-// TODO: The valueset seems broken in the terminology IG and I can't seem to find the code system?
-* code.coding[MedCom] = $MedCom#MCS88125 "Pt—Tidlig Opsporing af Begyndende Sygdom (TOBS) score; antal (værdi 0-15) = ?" 
+* code.coding[MedCom] = $MedComObservationCS#MCS88125 
 * valueQuantity.value = 3
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum

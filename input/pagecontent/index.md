@@ -4,14 +4,13 @@
 ## Introduction
 This implementation guide (IG) is provided by MedCom to describe the use of FHIR ®© in message based exchange of structured health data between the municipal acute care team and the general practitioner.  
 
-This IG contains profiles for MedCom HomeCareObservation (Danish: Kommunale Prøvesvar).The purpose of the HomeCareObservation is to support digital structured communication of results and observations performed and produced by the municipal acute care team.The HomeCareObservation will be sent from the municipal acute care team to the general practitioner on the condition that the general practitioner previously has requisitioned the acute care team to perform an emergency visit. With HomeCareObservation the quality of the results and observations (hereafter mentioned as observations results) are increased as structured data concerning sender, producer of the results, analysis codes and clinical observations, among others, are part of the HomeCareObservation. This allows the general practitioner to easily create an overview of the citizens health data.
+This IG contains profiles for MedCom HomeCareObservation (Danish: Kommunale Prøvesvar). The purpose of the HomeCareObservation is to support digital structured communication of results and observations performed and produced by the municipal acute care team. The HomeCareObservation will be sent from the municipal acute care team to the general practitioner on the condition that the general practitioner previously has requisitioned the acute care team to perform an emergency visit. With HomeCareObservation the quality of the results and observations (hereafter mentioned as observations results) are increased as structured data concerning sender, producer of the results, analysis codes and clinical observations, among others, are part of the HomeCareObservation. This allows the general practitioner to easily create an overview of the citizens health data.
 
 The MedCom HomeCareObservation supports following content in relation to healthcare:
 * exchange of observation results that the municipal acute care team has performed, analyzed and produced
 * exchange of clinical observations (nursing assessments) that are necessary in order to understand and interpret the citizens overall results and health status 
 * exchange of analysis comments that are necessary in order to understand and interpret individual analysis and results
 * exchange of relevant files (e.g. images or PDF)
-
 
 [More information about the clinical guidelines for applications can be found here.](https://medcomdk.github.io/dk_HomeCareObservations/#11-clinical-guidelines-and-documentation) 
 
@@ -35,7 +34,7 @@ Furthermore, it contains rules that constrains the ValueSet of activities in the
 
 
 ### MedComHomeCareObservationMessageHeader
-The [MedComHomeCareObservationMessageHeader](StructureDefinition-medcom-homecareobservation-MessageHeader.html) constrains the [MedComMessagingMessageHeader](https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-messageHeader.html) further to specify the fixed coding for this message and constrains the use of carbon-copy destination. 
+The [MedComHomeCareObservationMessageHeader](StructureDefinition-medcom-homecareobservation-messageheader.html) constrains the [MedComMessagingMessageHeader](https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-messageHeader.html) further to specify the fixed coding for this message and constrains the use of carbon-copy destination. 
 
 ### MedComHomeCareDiagnosticReport
 The [MedComHomeCareObservationDiagnosticReport](StructureDefinition-medcom-homecareobservation-diagnosticreport.html) profile contains the main content of the HomeCareObservation message. It is inherited from the profile [MedComCoreDiagnosticReport](https://medcomfhir.dk/ig/core/StructureDefinition-medcom-core-diagnosticreport.html). The MedComHomeCareObservationDiagnosticReport shall include observation results performed and produced by the municipalties acute care team. Futher shall the MedComHomeCareDiagnostiscRepport include an information about the status of the observation results.  
@@ -70,7 +69,7 @@ If the initials of the general practitioner are unknown, then the code "unknown"
 
 
 ### MedComProducerOrganization
-The [MedComProducerOrganization](https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-producer-organization.html) profile is used in a HomeCareObservation message to represent the organization that is responsible for performing and analysing, thereby producing, the observation results e.g. acute careteam. The MedComProducerOrganization shall be identified using municipality SOR-ID, and a producer-ID.  The producer-ID consists of a <a href= "http://medcomfhir.dk/ig/terminology/CodeSystem-MedComProducentID.html">three letter code, which is displayed on the terminology IG</a>. In a receiver system, the interpretation of the two codes will together state that an acute care team from e.g. Aarhus municipality is the producer of the results.
+The [MedComProducerOrganization](https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-producer-organization.html) profile is used in a HomeCareObservation message to represent the organization that is responsible for performing and analysing, thereby producing, the observation results e.g. acute careteam. The MedComProducerOrganization shall be identified using municipality SOR-ID, and a producer-ID. The producer-ID consists of a <a href= "http://medcomfhir.dk/ig/terminology/CodeSystem-MedComProducentID.html">three letter code, which is displayed on the terminology IG</a>. In a receiver system, the interpretation of the two codes will together state that an acute care team from e.g. Aarhus municipality is the producer of the results.
 
 ### MedComCoreMedia
 The [MedComCoreMedia](https://medcomfhir.dk/ig/core/StructureDefinition-medcom-core-media.html) profile is used in HomeCareObservation message to represents the relevant attachements added to the HomeCareDagnosticReport. MedComCoreMedia is referred from HomCareDiagnosticReport.media.link. 

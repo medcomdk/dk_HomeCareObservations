@@ -188,7 +188,7 @@ InstanceOf: MedComRequesterOrganization
 Title: "Example of a reciever organization with a SOR, an EAN  and Ydrenummer identifier."
 Description: "Example of an organization with a SOR and an EAN and Ydrenummer identifier."
 Usage: #example
-* identifier[SOR-ID].value = "52581000016005" 
+* identifier[SOR-ID].value = "52581000016005"
 * identifier[EAN-ID].value = "5790000127092"
 * identifier[Ydernummer].value = "061654"
 * contact.name.given = "O.K.M."
@@ -243,13 +243,12 @@ Usage: #example
 * entity.what = Reference(489de4f2-0d8d-4de2-a7ce-ccb93568799f)
 
 //Instancer til en annullering af HomeCareRapport 
-
 Instance: babb316c-796c-4d10-b97b-45274b5a0c44
 InstanceOf: MedComMessagingProvenance
 Title: "HomeCareDiagnosticReport example. The Provenance instance is only valid if used in a bundle (message) - cancelled message"
 Description: "HomeCareDiagnosticReport example. The Provenance instance is only valid if used in a bundle (message) - cancelled message"
 Usage: #example
-* target = Reference(07eb074b-be00-47e5-8bcb-484990a1a97e)
+* target = Reference(36cb86f1-a01a-4115-a84d-9390aa0ddcbd)
 * occurredDateTime = 2023-09-12T13:00:00+02:00
 * recorded = 2023-09-12T13:00:00+02:00
 * activity.coding = $HCOActivityCodes#retract-message

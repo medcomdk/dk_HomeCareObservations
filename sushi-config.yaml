@@ -16,7 +16,7 @@ publisher:
 
 dependencies:
   hl7.fhir.dk.core: 3.4.0
-  medcom.fhir.dk.terminology: 1.8.1
+  medcom.fhir.dk.terminology: 2.0.0-draft
   medcom.fhir.dk.core: 2.4.0
   medcom.fhir.dk.messaging: 3.0.0
   medcom.fhir.dk.messagedefinitions: 1.0.0-trial-use
