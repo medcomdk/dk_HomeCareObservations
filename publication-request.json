@@ -1,14 +1,10 @@
 {
     "package-id": "medcom.fhir.dk.homecareobservation",
-    "version": "1.0.0",
-    "path": "http://medcomfhir.dk/ig/homecareobservation/1.0.0",
-    "status": "release",
-    "sequence": "Release",
+    "version": "1.1.0-trial-use",
+    "path": "http://medcomfhir.dk/ig/homecareobservation/1.1.0-trial-use",
+    "status": "draft",
+    "sequence": "Release 1.x.x",
     "mode" : "milestone",
-    "first" : true,
-    "title": "The DK MedCom HomeCareObservation",
-    "category": "MedCom HomeCareObservation",
-    "introduction": "The MedCom HomeCareObservation Implementation Guide includes profiles developed to be part of a production trial of the communication between the general practitioner and municipal acute care team.",
     "descmd": "@release-notes.md",
-    "ci-build": "https://build.fhir.org/ig/medcomdk/dk_HomeCareObservations/"
+    "desc": "First trial release - 1.0.0 was released by mistake and is not in use and should not be used."
 }

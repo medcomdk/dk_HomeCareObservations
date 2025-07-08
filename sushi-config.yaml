@@ -1,45 +1,40 @@
-# ╭─────────────────────────Commonly Used ImplementationGuide Properties───────────────────────────╮
-# │  The properties below are used to create the ImplementationGuide resource. The most commonly   │
-# │  used properties are included. For a list of all supported properties and their functions,     │
-# │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: medcom.fhir.dk.homecareobservation
 canonical: http://medcomfhir.dk/ig/homecareobservation
 name: MedComHomeCareObservation
 title: MedCom HomeCareObservation
-# title: Example Title
-# description: Example Implementation Guide for getting started with SUSHI
-status: active # draft | active | retired | unknown
-version: 1.0.0
+description: Communication between general practitioners and municipal acute care team.
+status: draft # draft | active | retired | unknown
+version: 1.1.0-trial-use
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
-releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
-# license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
+releaseLabel: trial-use # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 jurisdiction: urn:iso:std:iso:3166#DK "Denmark"
 publisher:
   name: MedCom
   url: http://www.medcom.dk
-  # email: test@example.org
+  email: fhir@medcom.dk
 
 dependencies:
-  hl7.fhir.dk.core: 
-    uri: https://hl7.dk/fhir/core/
-    version: 2.2.0
-  medcom.fhir.dk.terminology: 1.5.0
-  medcom.fhir.dk.core: 2.3.0
-  medcom.fhir.dk.messaging: 2.1.0
-
-
+  hl7.fhir.dk.core: 3.4.0
+  medcom.fhir.dk.terminology: 2.0.0-draft
+  medcom.fhir.dk.core: 2.4.0
+  medcom.fhir.dk.messaging: 3.0.0
+  medcom.fhir.dk.messagedefinitions: 1.0.0-trial-use
   
 menu:
-  Table of Contents: toc.html
   Home: index.html
   Profiles: profiles.html
   Extensions: extensions.html
   Artifacts: artifacts.html
-  Downloads: downloads.html
+  More:
+    Table of Contents: toc.html
+    Downloads: downloads.html
+    Dependencies: dependencies.html
 
 parameters:
-  apply-contact: true
-  apply-jurisdiction: true
-  apply-publisher: true
+  apply-version: false
+  default-version: true
+  apply-publisher: false
+  default-publisher: true
+  pin-canonicals: pin-multiples
+  excludettl: true

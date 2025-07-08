@@ -1,6 +1,6 @@
 ### Scope and usage
 
-The MedComHomeCareObservation profile holds information about the observation results from the municipal acute care team The MedComHomeCareObservations are collected in a MedComHomeCareDiagnosticReport, that is sent as a MedComHomeCareObservation message to the general practitioner.
+The MedComHomeCareObservation profile holds information about the observation results from the municipal acute care team The MedComHomeCareObservations are collected in a MedComHomeCareObservationDiagnosticReport, that is sent as a MedComHomeCareObservation message to the general practitioner.
 
 The observations results needs to have a observation code that defines the type of the observation.
 The code for the observation shall be seleceted from a national analysis repertoire, that defines which observations and assesments methods the municipal acute care team can performe and send to the general practitioner. 
@@ -12,7 +12,7 @@ In a Observation resource, codes from CodeSystems are used to describe what is o
 * The NPU codes are the preferred first choice in official Danish health IT-systems and most used laboratory codes. NPU codes hase NPU prefixes in the begining of the code. 
 * MedCom codes are Danish codes that are refered as MCS- codes. 
 
-It is required to send the long and short name of the analysis. Both the long and short name of the performed observation can be fund on med medcom's terminology server. 
+It is required to send the long of the analysis. Both the long and short name of the performed observation can be found on MedCom's terminology server. 
 [Click here to see NPU observation codes.](http://medcomfhir.dk/ig/terminology/ValueSet-NPUObservationCodesValueSet.html)
 [Click here to see MCS observation codes.](http://medcomfhir.dk/ig/terminology/ValueSet-MedComObservationValueSet.html)
 
