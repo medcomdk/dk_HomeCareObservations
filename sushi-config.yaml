@@ -20,16 +20,6 @@ dependencies:
   medcom.fhir.dk.core: 2.4.0
   medcom.fhir.dk.messaging: 3.0.0
   medcom.fhir.dk.messagedefinitions: 1.0.0-trial-use
-  
-menu:
-  Home: index.html
-  Profiles: profiles.html
-  Extensions: extensions.html
-  Artifacts: artifacts.html
-  More:
-    Table of Contents: toc.html
-    Downloads: downloads.html
-    Dependencies: dependencies.html
 
 parameters:
   apply-version: false
