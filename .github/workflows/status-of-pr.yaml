@@ -10,5 +10,7 @@ permissions:
 jobs:
   lint:
     uses: medcomdk/fhir-publishing/.github/workflows/fsh-lint.yaml@main
+    with:
+      WHITELISTED_KEBAB_CASE_WORDS: 'medcom,homecare,homecareobservation,diagnosticreport'
   qa-report-status:
     uses: medcomdk/fhir-publishing/.github/workflows/qa-report.yaml@main
