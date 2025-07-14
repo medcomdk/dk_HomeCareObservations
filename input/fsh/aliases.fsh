@@ -11,7 +11,7 @@ Alias: $BundleType = http://hl7.org/fhir/bundle-type
 Alias: $ObsStatusCodeSystem = http://hl7.org/fhir/observation-status
 Alias: $mediastatus = http://hl7.org/fhir/event-status
 
-Alias: $NPUObservationCodes = urn:oid:1.2.208.176.2.1 // It's also: http://medcomfhir.dk/ig/terminology/CodeSystem/npu-observation-codes
+Alias: $NPUObservationCodes = urn:oid:1.2.208.176.2.1 // It's also: http://medcomfhir.dk/ig/terminology/CodeSystem/npu-observation-code
 Alias: $NPUObservationCodesValueSet = http://medcomfhir.dk/ig/terminology/ValueSet/npu-observation-codes-valueset
 
 Alias: $obsInterpretation = http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes
