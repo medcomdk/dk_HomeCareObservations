@@ -70,3 +70,5 @@ Certification of a system implies both an approved test protocol and run-through
 * [Test protocol in English (docx)](assets/documents/HomeCareObservation_Testprotocol_Receive.docx) 
 
 <p>&nbsp;</p>
+
+<a href="https://medcomfhir.dk/ig/homecareobservationtestscripts/index.html">Test IG including test scripts and test examples used for the test protocol can be found here.</a>
