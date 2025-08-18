@@ -1,7 +1,6 @@
 @ECHO OFF
 setlocal enabledelayedexpansion
 
-SET "dlurl=https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar"
 SET "publisher_jar=publisher.jar"
 SET "input_cache_path=%CD%\input-cache\"
 SET "skipPrompts=false"
