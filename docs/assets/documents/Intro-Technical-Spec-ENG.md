@@ -32,14 +32,14 @@ In total, eleven profiles from <a href="https://medcomfhir.dk/ig/core/" target="
 </thead>
 <tbody>
   <tr>
-    <td class="tg-0pky"><a href="https://medcomfhir.dk/ig/homecareobservation/StructureDefinition-medcom-homecare-message.html" target="_blank">MedComHomeCareObservationMessage</a></td>
+    <td class="tg-0pky"><a href="https://medcomfhir.dk/ig/homecareobservation/StructureDefinition-medcom-homecareobservation-message.html" target="_blank">MedComHomeCareObservationMessage</a></td>
     <td class="tg-0pky">Bundle</td>
     <td class="tg-0pky">Acts as a container for the<br>content of the message. Inherited from the MedComMessagingMessage</td>
     <td class="tg-0pky">ID                                      <br>Type                                         <br>Timestamp                       <br>Entry</td>
     <td class="tg-0pky">HomeCareObservation</td>
   </tr>
   <tr>
-    <td class="tg-0pky"><a href="https://medcomfhir.dk/ig/homecareobservation/StructureDefinition-medcom-homecareobservation-MessageHeader.html" target="_blank">MedComHomeCareObservationMessageHeader</a></td>
+    <td class="tg-0pky"><a href="https://medcomfhir.dk/ig/homecareobservation/StructureDefinition-medcom-homecareobservation-messageheader.html" target="_blank">MedComHomeCareObservationMessageHeader</a></td>
     <td class="tg-0pky">MessageHeader</td>
     <td class="tg-0pky">The header of a MedComHomeCare<br>message which must always be the first referenced profile, when the type of<br>the bundle is 'message'. This profile holds references to the fundamental<br>information in a message, such as sender, receiver, and the content of the<br>message in terms of HomeCareDiagnosticReport porfile. This profile is<br>inherited form the MedComMessagingMessageHeader</td>
     <td class="tg-0pky">Id<br><br>Text<br><br>Event[x]:eventCoding<br><br>Destination:primary<br><br>Destination:primary.use<br><br>Destination:primary.endpoint<br><br>Destination:primary.receiver<br><br>Sender<br><br>Source<br><br>Source.endpoint<br><br>Focus</td>
@@ -60,14 +60,14 @@ In total, eleven profiles from <a href="https://medcomfhir.dk/ig/core/" target="
     <td class="tg-0pky">Core</td>
   </tr>
   <tr>
-    <td class="tg-0pky"><a href="https://medcomfhir.dk/ig/homecareobservation/StructureDefinition-medcom-homecare-diagnosticreport.html" target="_blank">MedComHomeCareDiagnosticReport</a></td>
+    <td class="tg-0pky"><a href="https://medcomfhir.dk/ig/homecareobservation/StructureDefinition-medcom-homecareobservation-diagnosticreport.html" target="_blank">MedComHomeCareDiagnosticReport</a></td>
     <td class="tg-0pky">DiagnosticReport</td>
     <td class="tg-0pky">Contains information to all<br>observation results performed and produced by the municipal acute care team</td>
     <td class="tg-0pky">Status                                          <br>Code                                    <br>Subject                                                  <br>Issued                                 <br>Meta.Security          <br>Performer.ProducerOrganization       <br>Performer.practitionerRole                                    <br>Result                                   Media                                 Media.Link                      Conclusion</td>
     <td class="tg-0pky">HomeCareObservation</td>
   </tr>
   <tr>
-    <td class="tg-0pky"><a href="https://medcomfhir.dk/ig/homecareobservation/StructureDefinition-medcom-homeCare-observation.html" target="_blank">MedComHomeCareObservation</a></td>
+    <td class="tg-0pky"><a href="https://medcomfhir.dk/ig/homecareobservation/StructureDefinition-medcom-homecare-observation.html" target="_blank">MedComHomeCareObservation</a></td>
     <td class="tg-0pky">Observation</td>
     <td class="tg-0pky">Describes a  observation performed by municipal acute<br>care team </td>
     <td class="tg-0pky">Status                                          <br>Code                                                          <br>Code.coding.system                             <br>Code.coding.code                <br>Code.coding.display                                 Subject                                                  <br>EffectiveDateTime                         Value.Quantity                              <br>Value.string                          <br>Interpretation                                Note                            </td>
