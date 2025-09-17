@@ -50,7 +50,7 @@ Too expres what observation was performed a Observation.code.coding elemen shall
 [Click here to see the ValueSet for MCS codes.](https://medcomfhir.dk/ig/terminology/ValueSet-MedComObservationValueSet.html)
 
 
-It is alsao allowed to send an analysis comment on the individual result, if this comment is relevant to include. 
+It is also allowed to send an analysis comment on the individual result, if this comment is relevant to include. 
 Further it is required to send information that the result of the observation is not reference assessed (Dansk: ikke reference vurderet).
 
 ### MedComCorePatient

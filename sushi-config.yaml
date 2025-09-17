@@ -4,7 +4,7 @@ name: MedComHomeCareObservation
 title: MedCom HomeCareObservation
 description: Communication between general practitioners and municipal acute care team.
 status: draft # draft | active | retired | unknown
-version: 1.1.0-trial-use
+version: 1.1.1-trial-use
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: trial-use # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -19,7 +19,7 @@ dependencies:
   medcom.fhir.dk.terminology: 2.0.0-draft
   medcom.fhir.dk.core: 2.4.0
   medcom.fhir.dk.messaging: 3.0.0
-  medcom.fhir.dk.messagedefinitions: 1.0.0-trial-use
+  medcom.fhir.dk.messagedefinitions: 1.0.1-trial-use
   
 menu:
   Home: index.html
