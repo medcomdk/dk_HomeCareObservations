@@ -3,7 +3,6 @@ Parent: MedComCoreObservation
 Id: medcom-homecare-observation
 Title: "MedComHomeCareObservation"
 Description: "This profile is intended to be used in HomeCareObservation to hold information about the observation results."
-* ^experimental = true
 * effectiveDateTime MS
 * valueString 0..1 MS
 * valueString
@@ -66,7 +65,7 @@ Title: "Lymphocyte observation"
 Description: "Lymphocyte observation on the subject by acute care team"
 Usage: #example
 * status = $ObsStatusCodeSystem#final
-* code.coding[NPU] = $NPUObservationCodes#NPU02636 "B—Leukocytter; antalk. = ? × 10^9/L"
+* code.coding[NPU] = $NPUObservationCodes#NPU02636 "B—Lymfocytter; antalk. = ? × 10^9/L"
 * valueQuantity.value = 2.6
 * valueQuantity.unit = "10^9/L"
 * effectiveDateTime = 2023-09-12T10:30:08+02:00
