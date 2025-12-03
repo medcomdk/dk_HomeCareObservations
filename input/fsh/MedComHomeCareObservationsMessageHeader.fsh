@@ -3,7 +3,6 @@ Parent: MedComMessagingMessageHeader
 Id: medcom-homecareobservation-messageheader
 Title: "MedComHomeCareObservationMessageHeader"
 Description: "MessageHeader for HomeCareObservation"
-* ^experimental = true
 * id ^short = "A unique identifier for each message. This identifier should be globally unique."
 * eventCoding = $MessageEvents#homecareobservation-message
 * destination[cc] ..0 

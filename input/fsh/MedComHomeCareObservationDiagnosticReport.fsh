@@ -3,7 +3,6 @@ Parent: MedComCoreDiagnosticReport
 Id: medcom-homecareobservation-diagnosticreport
 Title: "MedComHomeCareObservationDiagnosticReport"
 Description: "This resource is intended to be used in relation with a HomeCareObservation message"
-* ^experimental = true
 * conclusion ^short = "A comment relevant for all observations in the report and necessary to interpret and understand the results (Danish:Klinisk kommentar)."
 * result only Reference(MedComHomeCareObservation)
 * result ^type.aggregation = #bundled
