@@ -20,8 +20,6 @@ Usage: #example
 * identifier[ProducentID].value = "KAF"
 * name = "Pleje og Rehabilitering"
 
-
-
 // Reciever instance - new message
 Instance: 42541447-b58c-4a1a-9514-02b80494bbd3
 InstanceOf: MedComRequesterOrganization 

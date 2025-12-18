@@ -12,7 +12,7 @@ Description: "This profile is intended to be used in HomeCareObservation to hold
 * valueQuantity.value
   * ^maxLength = 12
 * code.coding[NPU].code from $NPUObservationCodesValueSet (preferred)
-* code.coding[MedCom].code from $MedcomObservationVS (preferred)
+* code.coding[MedCom].code from $MedComObservationVS (preferred)
 * code.coding.display MS
 * interpretation 0..1 MS
 * interpretation from $obsInterpretationValueSet

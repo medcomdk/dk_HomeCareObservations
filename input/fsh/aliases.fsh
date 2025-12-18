@@ -18,4 +18,4 @@ Alias: $obsInterpretation = http://medcomfhir.dk/ig/terminology/CodeSystem/medco
 Alias: $obsInterpretationValueSet = http://medcomfhir.dk/ig/terminology/ValueSet/medcom-core-interpreation-valueset
 
 Alias: $MedComObservationCS = http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-observation-codes
-Alias: $MedcomObservationVS = http://medcomfhir.dk/ig/terminology/ValueSet/medcom-observation-valueset
+Alias: $MedComObservationVS = http://medcomfhir.dk/ig/terminology/ValueSet/medcom-observation-valueset
