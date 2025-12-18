@@ -2,8 +2,9 @@ Instance: ReceiveTestExample2
 InstanceOf: MedComHomeCareObservationMessage
 Title: "ReceiveTestExample2"
 Description: "Test Example 2 used in HomeCareObservation receive test protocol.
-With a clinical comment and unknown requesting doctors initials.
-Two observations. One with a comment + an NPU code and the other without a comment and a result using the MedComObservation valueset and a '>' sign"
+With a clinical comment and requesting doctor's initials are unknown. 
+Two observations: One with an analysis comment + an NPU code and the other without an analysis comment and a result using the MedComObservation valueset. 
+Both observations use a comparator ('<' or '>')"
 Usage: #example
 * type = $BundleType#message
 * timestamp = 2025-08-07T15:00:00+02:00

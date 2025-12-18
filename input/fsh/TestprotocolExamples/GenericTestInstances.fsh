@@ -105,8 +105,10 @@ Description: "Glucose measurement on Bruno Elmer . Used in testprotocol test exa
 Usage: #inline
 * status = $ObsStatusCodeSystem#final
 * code.coding[NPU] = $NPUObservationCodes#NPU22089 "P(kB)—Glucose; stofk. = ? mmol/L"
-* valueQuantity.value = 7.1
-* valueQuantity.unit = "mmol/L"
+* valueQuantity
+  * value = 7.1
+  * unit = "mmol/L"
+  * comparator = #<
 * effectiveDateTime = 2025-08-07T14:47:23+02:00
 * subject = Reference(BrunoElmerPatient)
 * interpretation.coding = $obsInterpretation#NI "Not Interpreted"

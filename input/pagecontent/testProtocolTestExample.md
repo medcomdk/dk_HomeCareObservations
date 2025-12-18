@@ -10,5 +10,5 @@ The examples are based on the test patient:
 
 |  Test example     |     Description     |
 |---|---|
-[Example1](./Bundle-ReceiveTestExample1.html) | Two observations without comments and the requesting doctor's name is known |
-[Example2](./Bundle-ReceiveTestExample2.html) | With a clinical comment and unknown requesting doctors initials.Two observations. One with a comment + an NPU code and the other without a comment and a result using the MedComObservation valueset and a '>' sign |
+[Example1](./Bundle-ReceiveTestExample1.html) | Two observations without clinical or analysis comments and the requesting doctor's initials is known |
+[Example2](./Bundle-ReceiveTestExample2.html) | With a clinical comment and requesting doctor's initials are unknown. Two observations: One with an analysis comment + an NPU code and the other without an analysis comment and a result using the MedComObservation valueset. Both observations use a comparator ('<' or '>') |

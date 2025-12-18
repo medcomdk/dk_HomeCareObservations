@@ -1,7 +1,7 @@
 Instance: ReceiveTestExample1
 InstanceOf: MedComHomeCareObservationMessage
 Title: "ReceiveTestExample1"
-Description: "Test Example 1 used in HomeCareObservation receive test protocol. Two observations without comments and the requesting doctor's name is known."
+Description: "Test Example 1 used in HomeCareObservation receive test protocol. Two observations without clinical or analysis comments and the requesting doctor's initials are known."
 Usage: #example
 * type = $BundleType#message
 * timestamp = 2025-08-07T15:00:00+02:00
