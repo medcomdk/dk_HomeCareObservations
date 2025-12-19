@@ -98,6 +98,19 @@ Usage: #inline
 * subject = Reference(BrunoElmerPatient)
 * interpretation.coding = $obsInterpretation#NI "Not Interpreted"
 
+Instance: GlucoseObservationOnPeterNoComment
+InstanceOf: MedComHomeCareObservation
+Title: "Glucose measurement"
+Description: "Glucose measurement on Peter Hansen."
+Usage: #inline
+* status = $ObsStatusCodeSystem#final
+* code.coding[NPU] = $NPUObservationCodes#NPU22089 "P(kB)—Glucose; stofk. = ? mmol/L"
+* valueQuantity.value = 3.8
+* valueQuantity.unit = "mmol/L"
+* effectiveDateTime = 2025-08-07T14:47:23+02:00
+* subject = Reference(PeterHansenECPRPatient)
+* interpretation.coding = $obsInterpretation#NI "Not Interpreted"
+
 Instance: GlucoseObservationOnBrunoWithComment
 InstanceOf: MedComHomeCareObservation
 Title: "Glucose measurement"
