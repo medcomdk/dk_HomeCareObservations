@@ -3,8 +3,8 @@ canonical: http://medcomfhir.dk/ig/homecareobservation
 name: MedComHomeCareObservation
 title: MedCom HomeCareObservation
 description: Communication between general practitioners and municipal acute care team.
-status: active # draft | active | retired | unknown
-version: 1.2.1
+status: draft # | active | retired | unknown
+version: 1.2.2
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
