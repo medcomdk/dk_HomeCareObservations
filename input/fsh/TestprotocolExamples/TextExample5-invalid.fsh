@@ -48,9 +48,10 @@ Description: "C-reaktive protein [CRP] test performed by acute care team on Brun
 Usage: #inline
 * status = $ObsStatusCodeSystem#final
 * code.coding[NPU] = $NPUObservationCodes#NPU19748 "P—C-reaktivt protein; massek. = ? mg/L"
-* effectiveDateTime = 2025-08-07T13:47:23+02:00
+* effectiveDateTime = 2025-08-09T13:47:23+02:00
 * subject = Reference(BrunoTestElmerPatient)
 * interpretation.coding = $obsInterpretation#NI "Not Interpreted"
+* note.text = "Denne observation er dateret til efter det kommunale prøvesvar er genereret."
 
 Instance: ReceiveTestExample5-MessageHeader
 InstanceOf: MedComHomeCareObservationMessageHeader

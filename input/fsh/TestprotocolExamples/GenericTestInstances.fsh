@@ -123,10 +123,25 @@ Usage: #inline
   * value = 7.1
   * unit = "mmol/L"
   * comparator = #<
-* effectiveDateTime = 2025-08-07T14:47:23+02:00
+* effectiveDateTime = 2026-05-05T14:47:23+02:00
 * subject = Reference(BrunoElmerPatient)
 * interpretation.coding = $obsInterpretation#NI "Not Interpreted"
 * note.text = "Glucose measurement expected. Patient was not fasting as requested. Dette er en \"prøve\" på 'nogle' særlige &lt;tegn&gt; ; til test &amp; certificering @ / \\ ^ *."
+
+Instance: HighRespirationObservationOnBrunoNoComment2
+InstanceOf: MedComHomeCareObservation
+Title: "Respiration observation"
+Description: "Respiration observation on Bruno. No Comment."
+Usage: #inline
+* status = $ObsStatusCodeSystem#final
+* code.coding[MedCom] = $MedComObservationCS#MCS88122 "Pt—Respiration; frekvens = ? X 1/min"
+* valueQuantity
+  * value = 25
+  * unit = "1/min"
+  * comparator = #>
+* effectiveDateTime = 2026-05-05T22:44:01+02:00
+* subject = Reference(BrunoElmerPatient)
+* interpretation.coding = $obsInterpretation#NI "Not Interpreted"
 
 Instance: HighRespirationObservationOnBrunoNoComment
 InstanceOf: MedComHomeCareObservation
@@ -139,7 +154,7 @@ Usage: #inline
   * value = 25
   * unit = "1/min"
   * comparator = #>
-* effectiveDateTime = 2025-08-07T14:30:01+02:00
+* effectiveDateTime = 2025-08-06T22:44:01+02:00
 * subject = Reference(BrunoElmerPatient)
 * interpretation.coding = $obsInterpretation#NI "Not Interpreted"
 
@@ -152,7 +167,7 @@ Usage: #inline
 * code.coding[NPU] = $NPUObservationCodes#NPU19748 "P—C-reaktivt protein; massek. = ? mg/L"
 * valueQuantity.value = 26
 * valueQuantity.unit = "mg/L"
-* effectiveDateTime = 2025-08-07T13:47:23+02:00
+* effectiveDateTime = 2025-08-06T13:25:23+02:00
 * subject = Reference(BrunoElmerPatient)
 * interpretation.coding = $obsInterpretation#NI "Not Interpreted"
 
@@ -166,7 +181,7 @@ Usage: #inline
 * valueQuantity.value = 7.8
 * valueQuantity.unit = "mmol/L" 
 * note.text = "Lorem Ipsum dolor sit amet, consectetur adipiscing elit."
-* effectiveDateTime = 2025-08-07T13:57:23+02:00
+* effectiveDateTime = 2025-08-07T13:45:23+02:00
 * subject = Reference(BrunoElmerPatient)
 * interpretation.coding = $obsInterpretation#NI "Not Interpreted"
 
@@ -180,7 +195,7 @@ Usage: #inline
 * valueQuantity.value = 8.1
 * valueQuantity.unit = "10^9/L"
 * note.text = "Lorem Ipsum dolor sit amet, consectetur adipiscing elit."
-* effectiveDateTime = 2025-08-07T14:27:08+02:00
+* effectiveDateTime = 2025-08-07T14:45:08+02:00
 * subject = Reference(BrunoElmerPatient)
 * interpretation.coding = $obsInterpretation#NI "Not Interpreted"
 
@@ -194,7 +209,7 @@ Usage: #inline
 * valueQuantity.value = 2.7
 * valueQuantity.unit = "10^9/L"
 * note.text = "Lorem Ipsum dolor sit amet, consectetur adipiscing elit."
-* effectiveDateTime = 2025-08-07T14:30:08+02:00
+* effectiveDateTime = 2025-08-07T14:45:08+02:00
 * subject = Reference(BrunoElmerPatient)
 * interpretation.coding = $obsInterpretation#NI "Not Interpreted"
 
