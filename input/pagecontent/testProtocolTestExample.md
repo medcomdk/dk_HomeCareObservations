@@ -14,3 +14,4 @@ The examples are based on the test patient:
 [Example2](./Bundle-ReceiveTestExample2.html) | With a clinical comment and requesting doctor's initials are unknown. Two observations: One with an analysis comment + an NPU code and the other without an analysis comment and a result using the MedComObservation valueset. Both observations use a comparator ('<' or '>') |
 [Example3](./Bundle-ReceiveTestExample3.html) | E-CPR, no comments, requesting doctor's initials unknown |
 [Example4](./Bundle-ReceiveTestExample4.html) | Many observations, requesting doctor's initials are known |
+[Example5](./Bundle-ReceiveTestExample5.html) | Invalid example with a practitioner role that does not include a code and no value for a observation result|

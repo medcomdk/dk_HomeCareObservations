@@ -1,1 +1,1 @@
-Version 1.2.1 is a patch update. It includes a new menu item 'Test Examples - Test Protocol' with two test examples.
+Version 1.2.2 is a patch update. It includes updated test examples.
