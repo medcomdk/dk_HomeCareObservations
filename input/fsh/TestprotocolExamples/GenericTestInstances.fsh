@@ -71,8 +71,7 @@ Usage: #inline
 * identifier[cpr].value = "2509479989"
 * name[official]
   * use = #official
-  * given[0] = "Bruno"
-  * given[1] = "Test"
+  * given = "Bruno"
   * family = "Elmer"
 
 Instance: PeterHansenECPRPatient
@@ -126,7 +125,7 @@ Usage: #inline
 * effectiveDateTime = 2026-05-05T14:47:23+02:00
 * subject = Reference(BrunoElmerPatient)
 * interpretation.coding = $obsInterpretation#NI "Not Interpreted"
-* note.text = "Glucose measurement expected. Patient was not fasting as requested. Dette er en \"prøve\" på 'nogle' særlige &lt;tegn&gt; ; til test &amp; certificering @ / \\ ^ *."
+* note.text = "Glucose measurement expected. Patient was not fasting as requested"
 
 Instance: HighRespirationObservationOnBrunoNoComment2
 InstanceOf: MedComHomeCareObservation
@@ -179,7 +178,7 @@ Usage: #inline
 * status = $ObsStatusCodeSystem#final
 * code.coding[NPU].code = $NPUObservationCodes#NPU02319 "B—Hæmoglobin(Fe); stofk. = ? mmol/L"
 * valueQuantity.value = 7.8
-* valueQuantity.unit = "mmol/L" 
+* valueQuantity.unit = "mmol/L"
 * note.text = "Lorem Ipsum dolor sit amet, consectetur adipiscing elit."
 * effectiveDateTime = 2025-08-07T13:45:23+02:00
 * subject = Reference(BrunoElmerPatient)
