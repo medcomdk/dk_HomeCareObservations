@@ -15,3 +15,13 @@ The examples are based on the test patient:
 [Example3](./Bundle-ReceiveTestExample3.html) | E-CPR, no comments, requesting doctor's initials unknown |
 [Example4](./Bundle-ReceiveTestExample4.html) | Many observations, requesting doctor's initials are known |
 [Example5](./Bundle-ReceiveTestExample5.html) | Invalid example where one observation is missing af result, the other has invalid NPU code, the diagnostic report is missing status and wrong use of role for the nurse. |
+
+
+#### Extras
+
+|  Test example     |     Description     |
+|---|---|
+[Extra1](./Bundle-ReceiveTestExampleExtra1.html) | Date: 2026-06-02 |
+[Extra2](./Bundle-ReceiveTestExampleExtra2.html) | Date: 2025-12-31 |
+[Extra3](./Bundle-ReceiveTestExampleExtra3.html) | Date: 2014-11-27 |
+[Extra4](./Bundle-ReceiveTestExampleExtra4.html) | Date: 2020-01-02 |
