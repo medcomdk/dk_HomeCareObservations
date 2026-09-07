@@ -27,10 +27,12 @@ menu:
   Extensions: extensions.html
   Artifacts: artifacts.html
   Test Examples - Test Protocol: testProtocolTestExample.html
+  Search: search.html
   More:
     Table of Contents: toc.html
     Downloads: downloads.html
     Dependencies: dependencies.html
+
 
 parameters:
   apply-version: false
